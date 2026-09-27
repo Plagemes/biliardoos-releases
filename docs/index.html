@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BiliardoOS – Scarica</title>
+<meta name="description" content="Gestionale gratuito per campionati a batterie di biliardo e boccette: sorteggio, convocazioni, appello, risultati, classifiche, WhatsApp ed email, assistente AI locale.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BiliardoOS">
+<meta property="og:title" content="BiliardoOS – Gestione campionati a batterie di biliardo">
+<meta property="og:description" content="Gratuito per Windows 10/11. Sorteggio, convocazioni, appello, risultati, classifiche, WhatsApp/email e assistente AI locale. Tocca per scaricare.">
+<meta property="og:url" content="https://plagemes.github.io/biliardoos-releases/">
+<meta property="og:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="BiliardoOS – Gestione campionati a batterie di biliardo">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BiliardoOS – Gestione campionati a batterie di biliardo">
+<meta name="twitter:description" content="Gratuito per Windows 10/11. Tocca per scaricare.">
+<meta name="twitter:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
+<link rel="icon" href="logo.png">
+<style>
+  :root { --green:#1f9d5c; --dark:#10231a; --bg:#f6f8f7; --text:#1b1f1d; --muted:#5b6660; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); }
+  header { background:linear-gradient(135deg,#1f9d5c,#157a47); color:#fff; padding:48px 16px 56px; text-align:center; }
+  header img { width:96px; height:96px; }
+  h1 { font-size:2.4rem; margin:12px 0 4px; }
+  header p { margin:0; font-size:1.1rem; opacity:.95; }
+  main { max-width:760px; margin:-32px auto 48px; padding:0 16px; }
+  .card { background:#fff; border-radius:16px; padding:28px; box-shadow:0 6px 24px rgba(0,0,0,.08); text-align:center; }
+  .btn { display:inline-block; background:var(--green); color:#fff; text-decoration:none; font-weight:700; font-size:1.2rem; padding:16px 28px; border-radius:12px; }
+  .btn:hover { background:#178a50; }
+  .meta { color:var(--muted); margin-top:12px; font-size:.95rem; }
+  .status { margin-top:16px; font-size:.95rem; color:var(--muted); min-height:1.2em; }
+  h2 { font-size:1.2rem; margin:28px 0 8px; text-align:left; }
+  ol, ul { text-align:left; line-height:1.6; }
+  .links { margin-top:24px; font-size:.95rem; }
+  .links a { color:var(--green); }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:24px 16px; }
+  img.shot { width:100%; border-radius:12px; border:1px solid #e3e8e5; margin-top:20px; }
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="Logo BiliardoOS">
+  <h1>BiliardoOS</h1>
+  <p>Gestione campionati a batterie di biliardo e boccette</p>
+</header>
+<main>
+  <div class="card">
+    <a id="dl" class="btn" href="https://github.com/Plagemes/biliardoos-releases/releases/latest">⬇️ Scarica BiliardoOS</a>
+    <div class="meta" id="ver">Gratuito · Windows 10/11</div>
+    <div class="status" id="status"></div>
+
+    <h2>Installazione</h2>
+    <ol>
+      <li>Apri il file <strong>BiliardoOS-Setup</strong> appena scaricato.</li>
+      <li>Se Windows mostra <strong>"Windows ha protetto il PC"</strong> (SmartScreen), clicca <strong>Ulteriori informazioni</strong> e poi <strong>Esegui comunque</strong>: il programma è gratuito ma non ha una firma digitale a pagamento.</li>
+      <li>Al primo avvio parte una configurazione guidata. Gli aggiornamenti successivi arrivano da soli.</li>
+    </ol>
+
+    <h2>Cosa fa</h2>
+    <ul>
+      <li>Sorteggio delle batterie con regole (nessuno gioca nel proprio bar, disponibilità, teste di serie) e verbale.</li>
+      <li>Tagliandi di convocazione (4 per A4 o singoli) e invio a bar e giocatori via WhatsApp ed email.</li>
+      <li>Appello, risultati, fase finale, classifiche e stagioni.</li>
+      <li>Assistente AI che gira sul tuo PC; i dati restano sul tuo computer.</li>
+    </ul>
+
+    <img class="shot" src="screenshots/02-tournament-overview.png" alt="Schermata di BiliardoOS">
+
+    <div class="links">
+      <a href="https://github.com/Plagemes/biliardoos-releases">Pagina del progetto</a> ·
+      <a href="https://github.com/Plagemes/biliardoos-releases/releases">Tutte le versioni</a> ·
+      <a href="https://github.com/Plagemes/biliardoos-releases/discussions">Domande e idee</a>
+    </div>
+  </div>
+</main>
+<footer>© 2026 Plagemes · Freeware, tutti i diritti riservati · Non è un prodotto ufficiale UISP</footer>
+<script>
+(function () {
+  var btn = document.getElementById('dl');
+  var ver = document.getElementById('ver');
+  var status = document.getElementById('status');
+  var noAuto = /[?&]noauto\b/.test(location.search);
+  fetch('https://api.github.com/repos/Plagemes/biliardoos-releases/releases/latest')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (rel) {
+      var exe = (rel.assets || []).filter(function (a) { return /\.exe$/i.test(a.name) && !/blockmap/i.test(a.name); })[0];
+      if (!exe) return;
+      btn.href = exe.browser_download_url;
+      var mb = Math.round(exe.size / 1048576);
+      ver.textContent = 'Versione ' + rel.tag_name.replace(/^v/, '') + ' · Gratuito · Windows 10/11 · ' + mb + ' MB';
+      if (!noAuto) {
+        status.textContent = 'Il download partirà tra pochi secondi…';
+        setTimeout(function () {
+          status.textContent = 'Download avviato. Se non parte, usa il pulsante qui sopra.';
+          window.location.href = exe.browser_download_url;
+        }, 2500);
+      }
+    })
+    .catch(function () { /* fallback: the button already points to the latest release page */ });
+})();
+</script>
+</body>
+</html>

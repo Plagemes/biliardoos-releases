@@ -1,0 +1,81 @@
+name: 🐞 Segnala un problema
+description: Segnala un malfunzionamento o un comportamento inatteso di BiliardoOS
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per il tempo che dedichi a segnalare il problema! Prima di
+        procedere:
+        - **Non includere dati personali** di giocatori/soci (nomi, numeri
+          di telefono, email reali): usa dati generici o anonimizzati negli
+          esempi.
+        - Se hai trovato una **vulnerabilità di sicurezza**, non usare
+          questo modulo: segui invece le istruzioni in
+          [SECURITY.md](https://github.com/Plagemes/biliardoos-releases/security/policy).
+
+  - type: input
+    id: versione
+    attributes:
+      label: Versione di BiliardoOS
+      description: La trovi in basso a sinistra nel menu laterale dell'app, oppure in Impostazioni.
+      placeholder: "es. 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Versione di Windows
+      placeholder: "es. Windows 11 23H2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: passi
+    attributes:
+      label: Passi per riprodurre il problema
+      description: Cosa hai fatto, passo per passo, prima che si verificasse il problema?
+      placeholder: |
+        1. Ho aperto il torneo "..."
+        2. Sono andato in "Risultati Batterie"
+        3. Ho cliccato su "..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: atteso
+    attributes:
+      label: Cosa ti aspettavi che succedesse
+    validations:
+      required: true
+
+  - type: textarea
+    id: ottenuto
+    attributes:
+      label: Cosa è successo invece
+      description: Includi il testo esatto di eventuali messaggi di errore, se possibile.
+    validations:
+      required: true
+
+  - type: textarea
+    id: allegati
+    attributes:
+      label: Allegati (facoltativo)
+      description: >
+        Se possibile, allega il "pacchetto di supporto" (Impostazioni →
+        "Segnala un problema": raccoglie log e informazioni diagnostiche,
+        mai dati personali dei giocatori) o uno screenshot del problema.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verifiche
+      options:
+        - label: Ho controllato che non esista già una segnalazione simile tra le Issue aperte/chiuse.
+          required: true
+        - label: Non ho incluso dati personali reali di giocatori/soci in questa segnalazione.
+          required: true

@@ -1,0 +1,130 @@
+BiliardoOS - Licenza d'uso (Freeware / EULA)
+Copyright (c) 2026 Plagemes. Tutti i diritti riservati.
+
+============================================================
+ITALIANO
+============================================================
+
+Il presente documento ("Licenza") regola l'uso del software BiliardoOS
+("Software"), distribuito in forma di programma installabile
+(BiliardoOS-Setup-*.exe) tramite il repository pubblico
+"Plagemes/biliardoos-releases".
+
+1. Concessione della licenza
+   L'autore concede a chiunque scarichi il Software una licenza gratuita,
+   non esclusiva, non trasferibile e revocabile per installare e utilizzare
+   il Software, per finalità personali, associative o gestionali legate
+   all'organizzazione di campionati di biliardo/boccette, a titolo
+   personale o per conto di un circolo/associazione.
+
+2. Tutti i diritti riservati
+   Il Software (codice sorgente, eseguibili, risorse grafiche, testi e
+   documentazione) NON è distribuito con licenza open source. Tutti i
+   diritti non espressamente concessi al punto 1 restano riservati
+   all'autore. In particolare, salvo preventiva autorizzazione scritta
+   dell'autore, non è consentito:
+   - decompilare, decodificare o tentare di ricavare il codice sorgente
+     del Software, salvo nei limiti in cui ciò sia inderogabilmente
+     consentito dalla legge applicabile;
+   - modificare, adattare o creare opere derivate del Software;
+   - ridistribuire, vendere, cedere in sublicenza, noleggiare o comunque
+     mettere a disposizione di terzi il Software o copie di esso, in
+     tutto o in parte, con o senza corrispettivo;
+   - rimuovere o alterare avvisi di copyright, marchi o indicazioni
+     dell'autore presenti nel Software o nella sua documentazione.
+
+3. Nessuna garanzia
+   IL SOFTWARE È FORNITO "COSÌ COM'È" ("AS IS"), SENZA GARANZIE DI ALCUN
+   TIPO, ESPRESSE O IMPLICITE, INCLUSE MA NON LIMITATE A GARANZIE DI
+   COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE
+   DI DIRITTI DI TERZI. L'AUTORE NON GARANTISCE CHE IL SOFTWARE SIA PRIVO
+   DI ERRORI O CHE FUNZIONI ININTERROTTAMENTE.
+
+4. Limitazione di responsabilità
+   NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE APPLICABILE, L'AUTORE NON
+   SARÀ RESPONSABILE PER ALCUN DANNO DIRETTO, INDIRETTO, INCIDENTALE,
+   SPECIALE O CONSEQUENZIALE (INCLUSA, A TITOLO ESEMPLIFICATIVO, LA
+   PERDITA DI DATI, DI PROFITTO O L'INTERRUZIONE DI ATTIVITÀ) DERIVANTE
+   DALL'USO O DALL'IMPOSSIBILITÀ DI USARE IL SOFTWARE, ANCHE QUALORA
+   L'AUTORE SIA STATO AVVISATO DELLA POSSIBILITÀ DI TALI DANNI. È
+   responsabilità dell'utente eseguire backup periodici dei propri dati
+   (funzione peraltro integrata nel Software).
+
+5. Dati dell'utente
+   Il Software elabora e conserva localmente, sul dispositivo
+   dell'utente, i dati inseriti dall'utente stesso (es. anagrafica
+   giocatori, tornei, risultati). L'autore non ha accesso a tali dati e
+   non li raccoglie da remoto. L'utente rimane l'unico responsabile del
+   trattamento dei dati personali di terzi (es. giocatori) inseriti nel
+   Software, in conformità alla normativa applicabile (es. GDPR).
+
+6. Componenti di terze parti
+   Il Software include o si appoggia a componenti open source di terze
+   parti, ciascuno distribuito secondo la propria licenza originale. Le
+   rispettive licenze restano invariate e prevalgono per i componenti a
+   cui si riferiscono.
+
+7. Cessazione
+   Questa Licenza si intende automaticamente revocata in caso di
+   violazione dei termini sopra indicati, fermo restando l'obbligo per
+   l'utente di disinstallare il Software e cancellarne ogni copia in tal
+   caso.
+
+8. Legge applicabile
+   La presente Licenza è regolata dalla legge italiana.
+
+Per richieste di autorizzazione, segnalazioni di sicurezza o altre
+comunicazioni, vedi i file SECURITY.md e la sezione "Supporto e idee" del
+README di questo repository.
+
+============================================================
+ENGLISH (informative translation - the Italian text prevails)
+============================================================
+
+1. Grant of license
+   The author grants anyone who downloads the Software a free,
+   non-exclusive, non-transferable, revocable license to install and use
+   it for personal, club/association or tournament-management purposes
+   related to organizing billiards/pool championships.
+
+2. All rights reserved
+   The Software is NOT open source. Except as expressly granted above,
+   unless you have prior written permission from the author you may not:
+   decompile or reverse-engineer the Software beyond what applicable law
+   allows; modify or create derivative works; resell, sublicense, rent,
+   or otherwise redistribute the Software or copies of it, in whole or in
+   part, for free or for a fee; or remove/alter copyright notices,
+   trademarks or author attributions.
+
+3. No warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+4. Limitation of liability
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR SHALL NOT
+   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL
+   DAMAGES (INCLUDING LOSS OF DATA OR PROFITS) ARISING FROM THE USE OF, OR
+   INABILITY TO USE, THE SOFTWARE. Users are responsible for keeping
+   regular backups of their own data (a feature built into the Software).
+
+5. User data
+   The Software processes and stores, locally on the user's own device,
+   data entered by the user (e.g. players, tournaments, results). The
+   author has no access to this data and does not collect it remotely.
+   The user remains solely responsible for their handling of any third
+   parties' personal data (e.g. players) entered into the Software, in
+   compliance with applicable law (e.g. GDPR).
+
+6. Third-party components
+   The Software includes or relies on third-party open-source components,
+   each distributed under its own original license, which remains
+   unaffected by this document.
+
+7. Termination
+   This license terminates automatically upon breach of the above terms,
+   at which point the user must uninstall the Software and delete all
+   copies of it.
+
+8. Governing law
+   This license is governed by Italian law.

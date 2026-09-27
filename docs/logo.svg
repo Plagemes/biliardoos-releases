@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="BiliardoOS">
+  <title>BiliardoOS</title>
+  <defs>
+    <radialGradient id="felt" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#1f9d5c"/>
+      <stop offset="55%" stop-color="#12793f"/>
+      <stop offset="100%" stop-color="#0b5c2e"/>
+    </radialGradient>
+    <linearGradient id="cue" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a2313"/>
+      <stop offset="14%" stop-color="#8a5a2b"/>
+      <stop offset="60%" stop-color="#d7a866"/>
+      <stop offset="100%" stop-color="#f1d8a8"/>
+    </linearGradient>
+    <radialGradient id="ballShine" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#d9d9d9"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background emblem -->
+  <circle cx="256" cy="256" r="248" fill="url(#felt)"/>
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#08411f" stroke-width="8"/>
+
+  <!-- Cue stick, diagonal, behind the ball -->
+  <rect x="-40" y="248" width="470" height="26" rx="13" fill="url(#cue)" transform="rotate(-35 256 256)"/>
+  <rect x="-40" y="248" width="60" height="26" rx="13" fill="#1c130a" transform="rotate(-35 256 256)"/>
+
+  <!-- Cue ball with the 8 -->
+  <circle cx="290" cy="290" r="118" fill="url(#ballShine)" stroke="#c9c9c9" stroke-width="2"/>
+  <circle cx="290" cy="290" r="52" fill="#161616"/>
+  <circle cx="290" cy="290" r="52" fill="none" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="290" y="290" text-anchor="middle" dominant-baseline="central"
+        font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="62" fill="#ffffff">8</text>
+  <ellipse cx="252" cy="248" rx="26" ry="16" fill="#ffffff" opacity="0.65"/>
+</svg>

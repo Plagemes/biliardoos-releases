@@ -1,0 +1,42 @@
+name: 💡 Proponi un'idea
+description: Suggerisci una nuova funzionalità o un miglioramento per BiliardoOS
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per l'idea! Se si tratta più di una domanda generale che di
+        una vera proposta, valuta di aprirla invece nella sezione
+        [Discussions](https://github.com/Plagemes/biliardoos-releases/discussions).
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Che problema risolverebbe?
+      description: Descrivi la situazione attuale e cosa ti manca o ti complica il lavoro.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Come immagini la soluzione?
+      description: Descrivi l'idea con più dettagli possibile (schermate/esempi sono benvenuti).
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternative considerate (facoltativo)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verifiche
+      options:
+        - label: Ho controllato che non esista già una proposta simile tra le Issue/Discussions aperte.
+          required: true

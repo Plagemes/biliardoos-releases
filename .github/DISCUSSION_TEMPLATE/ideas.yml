@@ -1,0 +1,25 @@
+title: "💡 [Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Condividi qui un'idea o un suggerimento per BiliardoOS - non serve
+        che sia già una proposta definita, va bene anche solo uno spunto da
+        discutere insieme.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: La tua idea
+      description: Cosa vorresti vedere in BiliardoOS, o cosa ti piacerebbe funzionasse diversamente?
+    validations:
+      required: true
+
+  - type: textarea
+    id: contesto
+    attributes:
+      label: Contesto (facoltativo)
+      description: Com'è organizzato il tuo campionato? Aiuta a capire meglio il caso d'uso.
+    validations:
+      required: false

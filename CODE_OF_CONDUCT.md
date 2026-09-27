@@ -1,3 +1,28 @@
+# Code of conduct
+
+This repository hosts BiliardoOS's public releases and related discussion
+spaces (Issues, Discussions). To keep them useful and welcoming for
+everyone:
+
+- **Be respectful**: criticism and bug reports are welcome, personal
+  attacks are not.
+- **Stay on topic**: Issues and Discussions are for reporting problems,
+  asking for help, or proposing ideas about BiliardoOS.
+- **No offensive, discriminatory content, or spam.**
+- **Don't share third parties' personal data** (e.g. players) in public
+  reports - use anonymized or example data instead, and for security
+  vulnerabilities follow [SECURITY.md](./SECURITY.md).
+
+Anyone who doesn't follow these rules may have their content removed or
+their access to Issues/Discussions revoked, at the project maintainer's
+discretion.
+
+For any doubts, start a discussion in the
+[Discussions](https://github.com/Plagemes/biliardoos-releases/discussions)
+section.
+
+---
+
 # Codice di condotta
 
 Questo repository ospita le release pubbliche di BiliardoOS e i relativi

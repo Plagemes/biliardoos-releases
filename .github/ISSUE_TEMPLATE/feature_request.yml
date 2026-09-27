@@ -1,11 +1,18 @@
-name: 💡 Proponi un'idea
-description: Suggerisci una nuova funzionalità o un miglioramento per BiliardoOS
+name: 💡 Suggest an idea / Proponi un'idea
+description: Suggest a new feature or improvement for BiliardoOS / Suggerisci una nuova funzionalità o un miglioramento per BiliardoOS
 title: "[Idea] "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
+        Thanks for the idea! If this is more of a general question than an
+        actual proposal, consider opening it in
+        [Discussions](https://github.com/Plagemes/biliardoos-releases/discussions)
+        instead.
+
+        ---
+
         Grazie per l'idea! Se si tratta più di una domanda generale che di
         una vera proposta, valuta di aprirla invece nella sezione
         [Discussions](https://github.com/Plagemes/biliardoos-releases/discussions).
@@ -13,30 +20,30 @@ body:
   - type: textarea
     id: problema
     attributes:
-      label: Che problema risolverebbe?
-      description: Descrivi la situazione attuale e cosa ti manca o ti complica il lavoro.
+      label: What problem would this solve? / Che problema risolverebbe?
+      description: Describe the current situation and what's missing or getting in your way. / Descrivi la situazione attuale e cosa ti manca o ti complica il lavoro.
     validations:
       required: true
 
   - type: textarea
     id: proposta
     attributes:
-      label: Come immagini la soluzione?
-      description: Descrivi l'idea con più dettagli possibile (schermate/esempi sono benvenuti).
+      label: How do you picture the solution? / Come immagini la soluzione?
+      description: Describe your idea in as much detail as possible (screenshots/examples are welcome). / Descrivi l'idea con più dettagli possibile (schermate/esempi sono benvenuti).
     validations:
       required: true
 
   - type: textarea
     id: alternative
     attributes:
-      label: Alternative considerate (facoltativo)
+      label: Alternatives considered (optional) / Alternative considerate (facoltativo)
     validations:
       required: false
 
   - type: checkboxes
     id: checks
     attributes:
-      label: Verifiche
+      label: Checklist / Verifiche
       options:
-        - label: Ho controllato che non esista già una proposta simile tra le Issue/Discussions aperte.
+        - label: I've checked there isn't already a similar proposal among open Issues/Discussions. / Ho controllato che non esista già una proposta simile tra le Issue/Discussions aperte.
           required: true

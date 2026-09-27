@@ -4,6 +4,12 @@ body:
   - type: markdown
     attributes:
       value: |
+        Share an idea or suggestion for BiliardoOS here - it doesn't need
+        to be a fully defined proposal yet, even just a starting point to
+        discuss together is fine.
+
+        ---
+
         Condividi qui un'idea o un suggerimento per BiliardoOS - non serve
         che sia già una proposta definita, va bene anche solo uno spunto da
         discutere insieme.
@@ -11,15 +17,15 @@ body:
   - type: textarea
     id: idea
     attributes:
-      label: La tua idea
-      description: Cosa vorresti vedere in BiliardoOS, o cosa ti piacerebbe funzionasse diversamente?
+      label: Your idea / La tua idea
+      description: What would you like to see in BiliardoOS, or what would you like to work differently? / Cosa vorresti vedere in BiliardoOS, o cosa ti piacerebbe funzionasse diversamente?
     validations:
       required: true
 
   - type: textarea
     id: contesto
     attributes:
-      label: Contesto (facoltativo)
-      description: Com'è organizzato il tuo campionato? Aiuta a capire meglio il caso d'uso.
+      label: Context (optional) / Contesto (facoltativo)
+      description: How is your championship organized? This helps us better understand your use case. / Com'è organizzato il tuo campionato? Aiuta a capire meglio il caso d'uso.
     validations:
       required: false

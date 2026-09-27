@@ -1,245 +1,214 @@
+🇬🇧 English | 🇮🇹 [Italiano](README.it.md)
+
 <div align="center">
 
-<img src="docs/logo.png" alt="Logo di BiliardoOS" width="120" height="120" />
+<img src="docs/logo.png" alt="BiliardoOS logo" width="120" height="120" />
 
 # BiliardoOS
 
-### Gestione campionati a batterie di biliardo
+### Heat-championship billiards tournament manager
 
-[![Ultima release](https://img.shields.io/github/v/release/Plagemes/biliardoos-releases?label=ultima%20versione&color=1f9d5c)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
-[![Download](https://img.shields.io/github/downloads/Plagemes/biliardoos-releases/total?label=download&color=1f9d5c)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
-[![Piattaforma](https://img.shields.io/badge/piattaforma-Windows-0078D6)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
-[![Licenza](https://img.shields.io/badge/licenza-Freeware-lightgrey)](./LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/Plagemes/biliardoos-releases?label=latest%20release&color=1f9d5c)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Plagemes/biliardoos-releases/total?label=downloads&color=1f9d5c)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6)](https://github.com/Plagemes/biliardoos-releases/releases/latest)
+[![License](https://img.shields.io/badge/license-Freeware-lightgrey)](./LICENSE)
 
-### ⬇️ [**Scarica BiliardoOS**](https://github.com/Plagemes/biliardoos-releases/releases/latest)
+### ⬇️ [**Download BiliardoOS**](https://github.com/Plagemes/biliardoos-releases/releases/latest)
 
-*Gratuito, per Windows 10/11 - vedi [Installazione](#installazione) per l'avviso di SmartScreen*
+*Free, for Windows 10/11 - see [Installation](#installation) for the SmartScreen warning*
 
 </div>
 
 ---
 
-## Cos'è
+## What it is
 
-**BiliardoOS** è un gestionale desktop per organizzare un **campionato a
-batterie** (heat championship) di biliardo/boccette - il formato con
-batterie da 8 o 4 giocatori (o coppie) seguite da una fase finale a
-eliminazione, tipico dei campionati amatoriali tra bar e circoli.
+**BiliardoOS** is a desktop app for running a **heat championship**
+(*campionato a batterie*) in billiards/pool ("boccette") - the format used
+by Italian amateur leagues, where players (or pairs) are split into heats
+of 8 or 4, followed by a knockout final phase. It's the tournament format
+typical of amateur championships between bars and clubs across Italy.
 
-Non è un prodotto ufficiale UISP e non usa loghi UISP: è pensato per
-qualunque circolo o associazione che organizzi un campionato amatoriale a
-batterie, dal sorteggio della prima serata fino al podio finale, con
-convocazioni, appello, risultati, classifiche, comunicazioni WhatsApp/email
-e un assistente AI locale che gira interamente sul PC dell'utente.
+It is **not an official UISP product** and doesn't use any UISP branding:
+it's built for any club or association running an amateur heat
+championship, from the draw of the first evening all the way to the final
+podium, with convocations, roll call, results, standings, WhatsApp/email
+communications, and a local AI assistant that runs entirely on the
+organizer's own PC.
 
-Tutti i dati restano sul PC di chi organizza: nessun account da creare,
-nessun servizio cloud da pagare, nessun dato inviato a terzi.
+**Note:** the app's user interface is currently in Italian, with partial
+English support. It was built for the Italian amateur billiards/boccette
+scene and its terminology (heats, roll call, convocation tickets...)
+reflects that context - the descriptions below use the Italian terms
+alongside their English translation where it helps.
 
-## Funzionalità
+All data stays on the organizer's PC: no account to create, no cloud
+service to pay for, nothing sent to third parties.
 
-### 🎲 Sorteggio intelligente
+## Features
 
-Sorteggio automatico delle batterie (da 8 o da 4, singoli o coppie), con
-regole configurabili - nessun giocatore nel proprio bar, distribuzione
-uniforme dei gruppi sportivi, teste di serie per classifica/ELO - e
-un'anteprima con punteggio di qualità prima di confermare. Ogni sorteggio
-produce un verbale ("Anteprima sorteggio" / "Verbale di Sorteggio")
-esportabile in PDF, con seed riproducibile.
+### 🎲 Smart draw (sorteggio)
 
+Automatic heat draw (*sorteggio*) - 8 or 4 players per heat, singles or
+pairs - with configurable rules (no player drawn into their own home bar,
+even distribution of sports clubs/groups, seeding by ranking/ELO) and a
+quality-scored preview before you confirm. Every draw produces a report
+("Anteprima sorteggio" / "Verbale di Sorteggio", i.e. draw preview / draw
+record) exportable to PDF, with a reproducible seed.
 
-### 🎫 Convocazioni e tagliandi
+### 🎫 Convocations and tickets
 
-Tagliandi di convocazione in PDF, impaginati 4 per foglio A4 per la stampa
-in sede oppure singoli per l'invio via email/WhatsApp, con orari di
-chiamata calcolati automaticamente.
+PDF convocation tickets (*tagliandi di convocazione*), laid out either 4
+per A4 sheet for printing at the venue or as single tickets for
+emailing/WhatsApp, with call times calculated automatically.
 
+### ✅ Roll call and results
 
-### ✅ Appello e risultati
+Roll call/check-in (*appello*) with late-arrival handling (grace period,
+penalties, exclusion, and walkover where needed) and real-time result
+entry, with standings and qualification updated after every match - even
+from a phone, via the read-only LAN server ("Results on your phone").
 
-Appello/check-in con gestione ritardi (tolleranza, penalità, esclusione ed
-eventuale walkover) e inserimento risultati in tempo reale, con
-classifiche e qualificazioni aggiornate a ogni partita - anche da telefono
-tramite il server LAN di sola lettura ("Risultati sul telefono").
+### 🏆 Final phase and standings
 
+Automatic generation of the final-phase bracket from the heat results, all
+the way to the podium, plus season standings (individual and by
+club/venue), a hall of fame, and advanced statistics.
 
-### 🏆 Fase finale e classifiche
+### 💬 WhatsApp/email communications with anti-ban protection
 
-Generazione automatica del tabellone della fase finale dai risultati delle
-batterie, fino al podio, con classifiche di stagione (individuali e per
-gruppo/sede), albo d'oro e statistiche avanzate.
+Built-in WhatsApp (no external app to install) and email via Gmail or
+Outlook, with automatic routing to whichever channel is available for each
+recipient. The send queue has anti-ban protection (randomized delays,
+hourly/daily limits, periodic pauses, quiet hours, an automatic circuit
+breaker if anomalies are detected) and a transparency page showing exactly
+what the queue is doing right now and why.
 
+### 🤖 Local AI assistant, also on WhatsApp
 
-### 💬 Comunicazioni WhatsApp/email con anti-blocco
+A **fully local** AI assistant (powered by [Ollama](https://ollama.com)),
+with automatic install/update of the engine and a model chosen to fit your
+PC's hardware: it answers questions about using the app, with direct links
+to the relevant pages. The same assistant can also answer players on
+WhatsApp, with organizer approval required for sensitive requests.
 
-WhatsApp integrato (nessuna app esterna da installare) ed email via Gmail o
-Outlook, con instradamento automatico sul canale disponibile per ciascun
-destinatario. La coda invii ha un sistema anti-blocco (ritardi casuali,
-limiti orari/giornalieri, pause periodiche, orari di silenzio, interruttore
-automatico in caso di anomalie) e una pagina di trasparenza che mostra cosa
-sta facendo la coda in questo momento e perché.
+### 🔗 Home/laptop link and on-site phone entry
 
+Optional link between a "home" PC and a laptop on the road (via
+[Tailscale](https://tailscale.com) or sync through a shared folder such as
+Google Drive), plus an "offline evening" mode for a remote venue, with
+result entry from a phone via a dedicated PIN.
 
-### 🤖 Assistente AI locale e su WhatsApp
+### 🔒 Privacy and backups
 
-Un assistente AI **locale** (basato su [Ollama](https://ollama.com)), con
-installazione e aggiornamento automatico del motore e scelta del modello in
-base all'hardware del PC: risponde a domande sull'uso del programma, con
-collegamenti diretti alle pagine giuste. Lo stesso assistente può rispondere
-anche ai giocatori su WhatsApp, con approvazione dell'organizzatore per le
-richieste sensibili.
-
-
-
-### 🔗 Collegamento casa/portatile e telefono in sede
-
-Collegamento facoltativo tra un PC "di casa" e un portatile in trasferta
-(via [Tailscale](https://tailscale.com) o sincronizzazione su cartella
-condivisa come Google Drive), e una modalità "serata offline" per una sede
-remota, con inserimento risultati da telefono tramite PIN dedicato.
-
-
-### 🔒 Privacy e backup
-
-Gestione del consenso privacy (GDPR), password opzionale di blocco app,
-backup locali automatici/manuali, copia di sicurezza esterna opzionale
-(OneDrive/USB/NAS) e controllo integrità dati automatico con riparazione
-sicura.
+Privacy consent management (GDPR-style), an optional app lock password,
+automatic/manual local backups, an optional external backup copy
+(OneDrive/USB/NAS), and automatic data-integrity checks with safe repair.
 
 ---
 
-## Requisiti
+## Requirements
 
-- **Windows 10 o 11** (64-bit).
-- Circa **200 MB** di spazio disco per l'app, più **1-2 GB opzionali** se si
-  usa l'assistente AI locale (download del modello).
-- Nessuna connessione a Internet richiesta per l'uso quotidiano; serve solo
-  per gli aggiornamenti automatici e, se usato, per il primo collegamento di
-  WhatsApp/email e il download del modello AI.
+- **Windows 10 or 11** (64-bit).
+- About **200 MB** of disk space for the app, plus an optional **1-2 GB**
+  if you use the local AI assistant (model download).
+- No Internet connection required for day-to-day use; it's only needed for
+  automatic updates and, if used, for the first WhatsApp/email connection
+  and the AI model download.
 
-## Installazione
+## Installation
 
-1. Scarica `BiliardoOS-Setup-<versione>.exe` dalla
-   [pagina delle release](https://github.com/Plagemes/biliardoos-releases/releases/latest).
-2. Avvialo con un doppio clic.
+1. Download `BiliardoOS-Setup-<version>.exe` from the
+   [releases page](https://github.com/Plagemes/biliardoos-releases/releases/latest).
+2. Double-click it to run it.
 
-### Avviso di Windows SmartScreen
+### Windows SmartScreen warning
 
-BiliardoOS non è (ancora) firmato con un certificato di firma del codice, un
-servizio a pagamento non indispensabile per un programma di uso
-interno/associativo. Al primo avvio vedrai un avviso come:
+BiliardoOS isn't (yet) signed with a code-signing certificate - a paid
+service that isn't essential for an app meant for internal/club use. On
+first launch you'll see a warning like:
 
-> **"Windows ha protetto il PC"** - *"Impossibile verificare l'editore..."*
+> **"Windows protected your PC"** - *"Windows Defender SmartScreen prevented an unrecognized app from starting..."*
 
-È previsto e innocuo: clicca su **"Ulteriori informazioni"**, poi su
-**"Esegui comunque"**. L'avviso compare perché l'eseguibile non è firmato
-digitalmente, non perché contenga qualcosa di dannoso.
+This is expected and harmless: click **"More info"**, then **"Run
+anyway"**. The warning appears because the executable isn't digitally
+signed, not because it contains anything harmful.
 
-L'installer si installa **per l'utente corrente**, senza richiedere permessi
-di amministratore (con l'opzione di installarlo per tutti gli utenti, se
-preferito), crea un collegamento su Desktop e menu Start, ed è interamente
-in italiano.
+The installer installs **for the current user only**, without requiring
+administrator rights (with the option to install it for all users if you
+prefer), creates a shortcut on the Desktop and in the Start menu, and its
+interface is currently Italian-only.
 
-## Aggiornamenti automatici
+## Automatic updates
 
-BiliardoOS controlla ed installa da solo le nuove versioni pubblicate qui,
-su GitHub - nessun account, nessuna configurazione richiesta: il
-controllo avviene all'avvio (silenzioso se non trova nulla) e può anche
-essere forzato da Impostazioni → **Aggiornamenti**. Un aggiornamento non
-viene mai installato durante una serata di gara aperta, ed è sempre
-preceduto da un backup automatico dei dati.
+BiliardoOS checks for and installs new versions published here on GitHub
+by itself - no account, no configuration needed: the check runs at startup
+(silently if nothing is found) and can also be triggered from Settings →
+**Updates**. An update is never installed while an open match evening is
+in progress, and it's always preceded by an automatic data backup.
 
 ## Privacy
 
-**Tutti i dati del campionato restano sul PC di chi organizza**: giocatori,
-tornei, risultati e comunicazioni sono salvati localmente, mai su un
-server esterno. L'assistente AI **gira in locale** (Ollama, sul PC
-dell'utente): le domande e le risposte non vengono inviate a nessun
-servizio cloud di terze parti. L'unico traffico verso l'esterno è quello
-strettamente necessario per gli aggiornamenti automatici e, se
-attivati dall'utente, per l'invio effettivo di email/messaggi WhatsApp.
+**All championship data stays on the organizer's own PC**: players,
+tournaments, results and communications are saved locally, never on an
+external server. The AI assistant **runs locally** (via Ollama, on the
+user's own PC): questions and answers are never sent to any third-party
+cloud service. The only outbound traffic is what's strictly needed for
+automatic updates and, if enabled by the user, for actually sending
+emails/WhatsApp messages.
 
 ## FAQ
 
-**Devo pagare qualcosa?**
-No, BiliardoOS è gratuito.
+**Do I have to pay for anything?**
+No, BiliardoOS is free.
 
-**Serve un account o un abbonamento a qualche servizio cloud?**
-No. I dati restano sul PC. WhatsApp ed email sono facoltativi e usano il
-tuo numero/account esistente, senza servizi terzi a pagamento.
+**Do I need an account or a subscription to some cloud service?**
+No. Data stays on your PC. WhatsApp and email are optional and use your
+own existing number/account, with no paid third-party services involved.
 
-**Funziona anche senza Internet?**
-Sì, per l'uso quotidiano (sorteggio, convocazioni stampate, appello,
-risultati, classifiche). Internet serve solo per gli aggiornamenti
-automatici e per le funzioni che richiedono un invio reale
-(WhatsApp/email) o il download del modello AI.
+**Does it work without Internet?**
+Yes, for day-to-day use (draw, printed convocations, roll call, results,
+standings). Internet is only needed for automatic updates and for features
+that require actually sending something (WhatsApp/email) or downloading
+the AI model.
 
-**L'assistente AI invia i miei dati a servizi esterni?**
-No: l'assistente gira in locale sul PC tramite Ollama. Nessun dato di
-giocatori o tornei lascia il PC per l'assistente AI.
+**Does the AI assistant send my data to external services?**
+No: the assistant runs locally on your PC via Ollama. No player or
+tournament data ever leaves the PC for the AI assistant.
 
-**Perché Windows mostra un avviso all'installazione?**
-Perché l'installer non è firmato con un certificato di firma del codice
-(a pagamento). Vedi [Installazione](#installazione) qui sopra.
+**Why does Windows show a warning during installation?**
+Because the installer isn't signed with a (paid) code-signing certificate.
+See [Installation](#installation) above.
 
-**Posso usarlo su più PC (casa e portatile)?**
-Sì, tramite la funzione facoltativa "Collegamento casa/portatile"
-(Tailscale o cartella condivisa) - vedi la sezione dedicata sopra.
+**Can I use it on more than one PC (home and laptop)?**
+Yes, via the optional "home/laptop link" feature (Tailscale or a shared
+folder) - see the dedicated section above.
 
-**Posso modificare o redistribuire il programma?**
-No: BiliardoOS è freeware "as-is", non open source - vedi
-[Licenza](#licenza).
+**Can I modify or redistribute the program?**
+No: BiliardoOS is freeware, provided "as is" - it's not open source. See
+[License](#license).
 
-**Dove trovo il manuale completo?**
-In-app, alla voce **Guida** del menu laterale, oppure chiedendo
-direttamente all'assistente AI integrato.
+**Where can I find the full manual?**
+In-app, under the **Guide** entry in the side menu, or by asking the
+built-in AI assistant directly.
 
-## Supporto e idee
+## Support & ideas
 
-- Hai una domanda, un dubbio o un'idea? Apri una discussione nella sezione
+- Have a question, doubt, or idea? Start a discussion in
   [**Discussions**](https://github.com/Plagemes/biliardoos-releases/discussions).
-- Hai trovato un problema? Apri una
+- Found a problem? Open an
   [**Issue**](https://github.com/Plagemes/biliardoos-releases/issues/new/choose)
-  - se possibile allega il "pacchetto di supporto" generabile da Impostazioni
-    → "Segnala un problema" (raccoglie log e informazioni diagnostiche, mai
-    dati personali dei giocatori).
+  - if possible, attach the "support package" you can generate from
+    Settings → "Report a problem" (it collects logs and diagnostic
+    information, never players' personal data).
 
-## Licenza
+## License
 
-BiliardoOS è **freeware**: uso gratuito consentito, ma **tutti i diritti
-sono riservati** - non è consentito rivendere, modificare o ridistribuire
-il programma senza permesso, ed è fornito "così com'è", senza garanzie.
-Vedi il testo completo in [`LICENSE`](./LICENSE).
+BiliardoOS is **freeware**: free to use, but **all rights are reserved** -
+you may not resell, modify, or redistribute the program without
+permission, and it's provided "as is", without warranties. See the full
+text in [`LICENSE`](./LICENSE).
 
 ---
 
-Se BiliardoOS ti è utile, lascia una ⭐ al progetto!
-
-<br/>
-
-## English
-
-**BiliardoOS** is a Windows desktop app to run a **heat-championship**
-billiards/pool tournament (batches of 8 or 4 players/pairs followed by a
-knockout final phase), typical of amateur leagues across bars and clubs. It
-is not an official UISP product.
-
-All tournament data stays on the organizer's own PC - no account, no cloud
-service, nothing sent to third parties. Highlights: automatic heat draw
-with configurable rules and a print-ready draw report, convocation tickets
-(PDF, 4-per-A4 or single), check-in with late-arrival handling, live
-results and standings, automatic final-phase bracket generation, WhatsApp
-(built-in, no external app) and email communications with an anti-ban
-send queue, a **fully local** AI assistant (via [Ollama](https://ollama.com))
-that also answers players on WhatsApp, an optional home-PC/laptop link
-(Tailscale or a shared folder), and local backups plus GDPR-style privacy
-tools.
-
-**Download**: see the [**latest release**](https://github.com/Plagemes/biliardoos-releases/releases/latest)
-(`BiliardoOS-Setup-<version>.exe`, Windows 10/11). The installer isn't
-code-signed yet, so Windows SmartScreen will show a warning on first run -
-click **"More info"** → **"Run anyway"**; this is expected and harmless.
-BiliardoOS is **freeware**: free to use, all rights reserved (no
-resale/modification/redistribution without permission, provided "as is") -
-see [`LICENSE`](./LICENSE). Questions or ideas? Use
-[**Discussions**](https://github.com/Plagemes/biliardoos-releases/discussions).
-Found a bug? Open an [**Issue**](https://github.com/Plagemes/biliardoos-releases/issues/new/choose).
+If you find BiliardoOS useful, leave a ⭐ on the project!

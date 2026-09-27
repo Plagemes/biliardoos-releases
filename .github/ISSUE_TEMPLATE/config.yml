@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 💬 Domande e discussioni
+  - name: 💬 Questions & discussions / Domande e discussioni
     url: https://github.com/Plagemes/biliardoos-releases/discussions
-    about: Per domande generali, dubbi sull'uso di BiliardoOS o idee da discutere prima di aprire una proposta formale, usa Discussions invece di una Issue.
+    about: For general questions, doubts about using BiliardoOS, or ideas to discuss before opening a formal proposal, use Discussions instead of an Issue. / Per domande generali, dubbi sull'uso di BiliardoOS o idee da discutere prima di aprire una proposta formale, usa Discussions invece di una Issue.

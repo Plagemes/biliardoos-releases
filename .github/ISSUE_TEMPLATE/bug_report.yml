@@ -1,11 +1,22 @@
-name: 🐞 Segnala un problema
-description: Segnala un malfunzionamento o un comportamento inatteso di BiliardoOS
+name: 🐞 Report a bug / Segnala un problema
+description: Report a malfunction or unexpected behavior in BiliardoOS / Segnala un malfunzionamento o un comportamento inatteso di BiliardoOS
 title: "[Bug] "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
+        Thanks for taking the time to report this! Before you proceed:
+        - **Don't include personal data** of players/members (real names,
+          phone numbers, emails): use generic or anonymized data in your
+          examples.
+        - If you've found a **security vulnerability**, don't use this
+          form: follow the instructions in
+          [SECURITY.md](https://github.com/Plagemes/biliardoos-releases/security/policy)
+          instead.
+
+        ---
+
         Grazie per il tempo che dedichi a segnalare il problema! Prima di
         procedere:
         - **Non includere dati personali** di giocatori/soci (nomi, numeri
@@ -18,64 +29,67 @@ body:
   - type: input
     id: versione
     attributes:
-      label: Versione di BiliardoOS
-      description: La trovi in basso a sinistra nel menu laterale dell'app, oppure in Impostazioni.
-      placeholder: "es. 1.0.0"
+      label: BiliardoOS version / Versione di BiliardoOS
+      description: You can find it at the bottom-left of the app's side menu, or in Settings. / La trovi in basso a sinistra nel menu laterale dell'app, oppure in Impostazioni.
+      placeholder: "e.g. / es. 1.0.0"
     validations:
       required: true
 
   - type: input
     id: windows
     attributes:
-      label: Versione di Windows
-      placeholder: "es. Windows 11 23H2"
+      label: Windows version / Versione di Windows
+      placeholder: "e.g. / es. Windows 11 23H2"
     validations:
       required: true
 
   - type: textarea
     id: passi
     attributes:
-      label: Passi per riprodurre il problema
-      description: Cosa hai fatto, passo per passo, prima che si verificasse il problema?
+      label: Steps to reproduce / Passi per riprodurre il problema
+      description: What did you do, step by step, before the problem occurred? / Cosa hai fatto, passo per passo, prima che si verificasse il problema?
       placeholder: |
-        1. Ho aperto il torneo "..."
-        2. Sono andato in "Risultati Batterie"
-        3. Ho cliccato su "..."
+        1. I opened the tournament "..." / Ho aperto il torneo "..."
+        2. I went to "Heat results" / Sono andato in "Risultati Batterie"
+        3. I clicked on "..." / Ho cliccato su "..."
     validations:
       required: true
 
   - type: textarea
     id: atteso
     attributes:
-      label: Cosa ti aspettavi che succedesse
+      label: What you expected to happen / Cosa ti aspettavi che succedesse
     validations:
       required: true
 
   - type: textarea
     id: ottenuto
     attributes:
-      label: Cosa è successo invece
-      description: Includi il testo esatto di eventuali messaggi di errore, se possibile.
+      label: What happened instead / Cosa è successo invece
+      description: Include the exact text of any error messages, if possible. / Includi il testo esatto di eventuali messaggi di errore, se possibile.
     validations:
       required: true
 
   - type: textarea
     id: allegati
     attributes:
-      label: Allegati (facoltativo)
+      label: Attachments (optional) / Allegati (facoltativo)
       description: >
-        Se possibile, allega il "pacchetto di supporto" (Impostazioni →
-        "Segnala un problema": raccoglie log e informazioni diagnostiche,
-        mai dati personali dei giocatori) o uno screenshot del problema.
+        If possible, attach the "support package" (Settings → "Report a
+        problem": collects logs and diagnostic information, never players'
+        personal data) or a screenshot of the issue. / Se possibile, allega
+        il "pacchetto di supporto" (Impostazioni → "Segnala un problema":
+        raccoglie log e informazioni diagnostiche, mai dati personali dei
+        giocatori) o uno screenshot del problema.
     validations:
       required: false
 
   - type: checkboxes
     id: checks
     attributes:
-      label: Verifiche
+      label: Checklist / Verifiche
       options:
-        - label: Ho controllato che non esista già una segnalazione simile tra le Issue aperte/chiuse.
+        - label: I've checked there isn't already a similar report among open/closed Issues. / Ho controllato che non esista già una segnalazione simile tra le Issue aperte/chiuse.
           required: true
-        - label: Non ho incluso dati personali reali di giocatori/soci in questa segnalazione.
+        - label: I haven't included any real personal data of players/members in this report. / Non ho incluso dati personali reali di giocatori/soci in questa segnalazione.
           required: true

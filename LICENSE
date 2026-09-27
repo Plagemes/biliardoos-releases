@@ -1,8 +1,82 @@
-BiliardoOS - Licenza d'uso (Freeware / EULA)
-Copyright (c) 2026 Plagemes. Tutti i diritti riservati.
+BiliardoOS - License (Freeware / EULA)
+Copyright (c) 2026 Plagemes. All rights reserved.
 
 ============================================================
-ITALIANO
+ENGLISH (informative translation - the Italian text below prevails)
+============================================================
+
+This document ("License") governs the use of the BiliardoOS software
+("Software"), distributed as an installable program
+(BiliardoOS-Setup-*.exe) through the public repository
+"Plagemes/biliardoos-releases".
+
+1. Grant of license
+   The author grants anyone who downloads the Software a free,
+   non-exclusive, non-transferable, revocable license to install and use
+   it for personal, club/association or tournament-management purposes
+   related to organizing billiards/pool championships, whether on one's
+   own behalf or on behalf of a club/association.
+
+2. All rights reserved
+   The Software (source code, executables, graphic assets, text and
+   documentation) is NOT distributed under an open-source license. All
+   rights not expressly granted in point 1 remain reserved to the author.
+   In particular, unless you have prior written permission from the
+   author, you may not:
+   - decompile, reverse-engineer, or otherwise attempt to derive the
+     source code of the Software, except to the extent this is
+     mandatorily permitted by applicable law;
+   - modify, adapt, or create derivative works of the Software;
+   - resell, sublicense, rent, redistribute, or otherwise make available
+     to third parties the Software or copies of it, in whole or in part,
+     whether for a fee or free of charge;
+   - remove or alter copyright notices, trademarks, or author attributions
+     present in the Software or its documentation.
+
+3. No warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. THE AUTHOR DOES
+   NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR THAT IT WILL RUN
+   UNINTERRUPTED.
+
+4. Limitation of liability
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR SHALL NOT
+   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL
+   DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF DATA, LOSS OF PROFIT, OR
+   BUSINESS INTERRUPTION) ARISING FROM THE USE OF, OR INABILITY TO USE, THE
+   SOFTWARE, EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+   DAMAGES. It is the user's responsibility to keep regular backups of
+   their own data (a feature that is, in any case, built into the
+   Software).
+
+5. User data
+   The Software processes and stores, locally on the user's own device,
+   data entered by the user (e.g. player records, tournaments, results).
+   The author has no access to this data and does not collect it
+   remotely. The user remains solely responsible for their handling of
+   any third parties' personal data (e.g. players) entered into the
+   Software, in compliance with applicable law (e.g. GDPR).
+
+6. Third-party components
+   The Software includes or relies on third-party open-source components,
+   each distributed under its own original license. Those licenses remain
+   unchanged and prevail for the components they apply to.
+
+7. Termination
+   This License is automatically terminated in the event of a breach of
+   the terms above, without prejudice to the user's obligation to
+   uninstall the Software and delete all copies of it in that case.
+
+8. Governing law
+   This License is governed by Italian law.
+
+For permission requests, security reports, or other communications, see
+the SECURITY.md file and the "Support & ideas" section of this
+repository's README.
+
+============================================================
+ITALIANO (testo di riferimento - prevale in caso di conflitto)
 ============================================================
 
 Il presente documento ("Licenza") regola l'uso del software BiliardoOS
@@ -76,55 +150,3 @@ Il presente documento ("Licenza") regola l'uso del software BiliardoOS
 Per richieste di autorizzazione, segnalazioni di sicurezza o altre
 comunicazioni, vedi i file SECURITY.md e la sezione "Supporto e idee" del
 README di questo repository.
-
-============================================================
-ENGLISH (informative translation - the Italian text prevails)
-============================================================
-
-1. Grant of license
-   The author grants anyone who downloads the Software a free,
-   non-exclusive, non-transferable, revocable license to install and use
-   it for personal, club/association or tournament-management purposes
-   related to organizing billiards/pool championships.
-
-2. All rights reserved
-   The Software is NOT open source. Except as expressly granted above,
-   unless you have prior written permission from the author you may not:
-   decompile or reverse-engineer the Software beyond what applicable law
-   allows; modify or create derivative works; resell, sublicense, rent,
-   or otherwise redistribute the Software or copies of it, in whole or in
-   part, for free or for a fee; or remove/alter copyright notices,
-   trademarks or author attributions.
-
-3. No warranty
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
-
-4. Limitation of liability
-   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR SHALL NOT
-   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL
-   DAMAGES (INCLUDING LOSS OF DATA OR PROFITS) ARISING FROM THE USE OF, OR
-   INABILITY TO USE, THE SOFTWARE. Users are responsible for keeping
-   regular backups of their own data (a feature built into the Software).
-
-5. User data
-   The Software processes and stores, locally on the user's own device,
-   data entered by the user (e.g. players, tournaments, results). The
-   author has no access to this data and does not collect it remotely.
-   The user remains solely responsible for their handling of any third
-   parties' personal data (e.g. players) entered into the Software, in
-   compliance with applicable law (e.g. GDPR).
-
-6. Third-party components
-   The Software includes or relies on third-party open-source components,
-   each distributed under its own original license, which remains
-   unaffected by this document.
-
-7. Termination
-   This license terminates automatically upon breach of the above terms,
-   at which point the user must uninstall the Software and delete all
-   copies of it.
-
-8. Governing law
-   This license is governed by Italian law.

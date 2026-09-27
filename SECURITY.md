@@ -1,3 +1,39 @@
+# Security
+
+## Reporting a vulnerability
+
+If you've found a security vulnerability in BiliardoOS, **please don't
+open a public Issue**: use GitHub's private reporting instead, so the
+problem can be fixed before it's made public.
+
+1. Go to the **[Security](https://github.com/Plagemes/biliardoos-releases/security/advisories/new)**
+   tab of this repository.
+2. Click **"Report a vulnerability"** to open a private report (visible
+   only to you and the maintainer).
+3. Describe the issue in as much detail as possible: the BiliardoOS
+   version affected, steps to reproduce it, and the estimated impact.
+
+You'll receive a reply as soon as possible. Please don't publicly disclose
+details of the vulnerability until a fix has been released.
+
+## Scope
+
+This repository (`biliardoos-releases`) only contains BiliardoOS's
+**release artifacts** (installer and update files), not the source code.
+Reports about the application itself (behavior, code vulnerabilities,
+dependencies, etc.) should still be opened here, through the private
+report described above: they'll be handled by whoever maintains the
+source code.
+
+## Data and privacy
+
+BiliardoOS processes championship data **locally on the user's own PC**
+and never sends it to any server operated by the author. For questions
+about the privacy of data handled by the app, see the "Privacy" section of
+the [README](./README.md) and the "Privacy" page within the app itself.
+
+---
+
 # Sicurezza
 
 ## Segnalare una vulnerabilità

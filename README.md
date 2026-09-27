@@ -15,6 +15,8 @@
 
 ### ⬇️ [**Download BiliardoOS**](https://github.com/Plagemes/biliardoos-releases/releases/latest)
 
+🔗 Share link: **https://plagemes.github.io/biliardoos-releases/**
+
 *Free, for Windows 10/11 - see [Installation](#installation) for the SmartScreen warning*
 
 </div>

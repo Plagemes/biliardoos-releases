@@ -56,11 +56,15 @@ quality-scored preview before you confirm. Every draw produces a report
 ("Anteprima sorteggio" / "Verbale di Sorteggio", i.e. draw preview / draw
 record) exportable to PDF, with a reproducible seed.
 
+![Draw report (verbale di sorteggio) for a heat championship](docs/screenshots/03-verbale-sorteggio.png)
+
 ### 🎫 Convocations and tickets
 
 PDF convocation tickets (*tagliandi di convocazione*), laid out either 4
 per A4 sheet for printing at the venue or as single tickets for
 emailing/WhatsApp, with call times calculated automatically.
+
+![Convocation tickets, four per A4 sheet](docs/screenshots/04-convocazioni-4-per-a4.png)
 
 ### ✅ Roll call and results
 
@@ -69,11 +73,18 @@ penalties, exclusion, and walkover where needed) and real-time result
 entry, with standings and qualification updated after every match - even
 from a phone, via the read-only LAN server ("Results on your phone").
 
+<p float="left">
+  <img src="docs/screenshots/06-appello.png" alt="Roll call (appello) screen with check-in status" width="390" />
+  <img src="docs/screenshots/07-risultati-batterie.png" alt="Heat results with match scores and qualifiers" width="390" />
+</p>
+
 ### 🏆 Final phase and standings
 
 Automatic generation of the final-phase bracket from the heat results, all
 the way to the podium, plus season standings (individual and by
 club/venue), a hall of fame, and advanced statistics.
+
+![Final phase bracket and podium](docs/screenshots/08-fase-finale-podio.png)
 
 ### 💬 WhatsApp/email communications with anti-ban protection
 
@@ -84,6 +95,8 @@ hourly/daily limits, periodic pauses, quiet hours, an automatic circuit
 breaker if anomalies are detected) and a transparency page showing exactly
 what the queue is doing right now and why.
 
+![Communications queue transparency page](docs/screenshots/10-programmazione-invii.png)
+
 ### 🤖 Local AI assistant, also on WhatsApp
 
 A **fully local** AI assistant (powered by [Ollama](https://ollama.com)),
@@ -92,12 +105,16 @@ PC's hardware: it answers questions about using the app, with direct links
 to the relevant pages. The same assistant can also answer players on
 WhatsApp, with organizer approval required for sensitive requests.
 
+![Local AI assistant answering a question in the app](docs/screenshots/12-assistente-ai.png)
+
 ### 🔗 Home/laptop link and on-site phone entry
 
 Optional link between a "home" PC and a laptop on the road (via
 [Tailscale](https://tailscale.com) or sync through a shared folder such as
 Google Drive), plus an "offline evening" mode for a remote venue, with
 result entry from a phone via a dedicated PIN.
+
+![Home/laptop link setup screen](docs/screenshots/14-collegamento-casa-portatile.png)
 
 ### 🔒 Privacy and backups
 

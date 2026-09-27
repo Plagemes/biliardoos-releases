@@ -48,6 +48,7 @@ un'anteprima con punteggio di qualità prima di confermare. Ogni sorteggio
 produce un verbale ("Anteprima sorteggio" / "Verbale di Sorteggio")
 esportabile in PDF, con seed riproducibile.
 
+![Verbale di sorteggio di una batteria](docs/screenshots/03-verbale-sorteggio.png)
 
 ### 🎫 Convocazioni e tagliandi
 
@@ -55,6 +56,7 @@ Tagliandi di convocazione in PDF, impaginati 4 per foglio A4 per la stampa
 in sede oppure singoli per l'invio via email/WhatsApp, con orari di
 chiamata calcolati automaticamente.
 
+![Tagliandi di convocazione, quattro per foglio A4](docs/screenshots/04-convocazioni-4-per-a4.png)
 
 ### ✅ Appello e risultati
 
@@ -63,6 +65,10 @@ eventuale walkover) e inserimento risultati in tempo reale, con
 classifiche e qualificazioni aggiornate a ogni partita - anche da telefono
 tramite il server LAN di sola lettura ("Risultati sul telefono").
 
+<p float="left">
+  <img src="docs/screenshots/06-appello.png" alt="Schermata di appello con stato dei check-in" width="390" />
+  <img src="docs/screenshots/07-risultati-batterie.png" alt="Risultati delle batterie con punteggi e qualificati" width="390" />
+</p>
 
 ### 🏆 Fase finale e classifiche
 
@@ -70,6 +76,7 @@ Generazione automatica del tabellone della fase finale dai risultati delle
 batterie, fino al podio, con classifiche di stagione (individuali e per
 gruppo/sede), albo d'oro e statistiche avanzate.
 
+![Tabellone della fase finale e podio](docs/screenshots/08-fase-finale-podio.png)
 
 ### 💬 Comunicazioni WhatsApp/email con anti-blocco
 
@@ -80,6 +87,7 @@ limiti orari/giornalieri, pause periodiche, orari di silenzio, interruttore
 automatico in caso di anomalie) e una pagina di trasparenza che mostra cosa
 sta facendo la coda in questo momento e perché.
 
+![Pagina di trasparenza della coda comunicazioni](docs/screenshots/10-programmazione-invii.png)
 
 ### 🤖 Assistente AI locale e su WhatsApp
 
@@ -90,7 +98,7 @@ collegamenti diretti alle pagine giuste. Lo stesso assistente può rispondere
 anche ai giocatori su WhatsApp, con approvazione dell'organizzatore per le
 richieste sensibili.
 
-
+![Assistente AI locale che risponde a una domanda nell'app](docs/screenshots/12-assistente-ai.png)
 
 ### 🔗 Collegamento casa/portatile e telefono in sede
 
@@ -98,6 +106,8 @@ Collegamento facoltativo tra un PC "di casa" e un portatile in trasferta
 (via [Tailscale](https://tailscale.com) o sincronizzazione su cartella
 condivisa come Google Drive), e una modalità "serata offline" per una sede
 remota, con inserimento risultati da telefono tramite PIN dedicato.
+
+![Schermata di collegamento casa/portatile](docs/screenshots/14-collegamento-casa-portatile.png)
 
 
 ### 🔒 Privacy e backup

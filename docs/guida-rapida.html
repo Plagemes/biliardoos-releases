@@ -214,8 +214,9 @@
     document.querySelector('[data-cta-title]').textContent = copy[lang].title;
     document.querySelector('[data-cta-copy]').textContent = copy[lang].body;
     document.querySelector('[data-cta-home]').textContent = copy[lang].cta;
-    document.getElementById('back-home').href = './?lang=' + lang;
-    document.getElementById('cta-home').href = './?lang=' + lang;
+    const homeHref = lang === 'en' ? './en/' : './';
+    document.getElementById('back-home').href = homeHref;
+    document.getElementById('cta-home').href = homeHref;
     document.title = lang === 'en' ? 'BiliardoOS — Quick guide' : 'BiliardoOS — Guida rapida';
     if(push){ const u = new URL(location.href); u.searchParams.set('lang',lang); history.replaceState(null,'',u); }
   }

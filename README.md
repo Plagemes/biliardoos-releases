@@ -17,6 +17,8 @@
 
 🔗 Share link: **https://plagemes.github.io/biliardoos-releases/**
 
+📄 New organizer? Read the [**Guida rapida**](https://plagemes.github.io/biliardoos-releases/guida-rapida.html) (Italian quick-start guide, also as [PDF](https://plagemes.github.io/biliardoos-releases/guida-rapida.pdf))
+
 *Free, for Windows 10/11 - see [Installation](#installation) for the SmartScreen warning*
 
 </div>
@@ -179,7 +181,7 @@ emails/WhatsApp messages.
 ## FAQ
 
 **Do I have to pay for anything?**
-No, BiliardoOS is free.
+No: the Base version of BiliardoOS is free to download and use.
 
 **Do I need an account or a subscription to some cloud service?**
 No. Data stays on your PC. WhatsApp and email are optional and use your

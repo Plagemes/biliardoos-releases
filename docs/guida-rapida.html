@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b17">
+  <title>BiliardoOS — Guida rapida</title>
+  <meta name="description" content="Guida rapida per chi organizza per la prima volta un campionato a batterie con BiliardoOS: installazione, primo avvio, sorteggio, convocazioni, serata di gara, fase finale, backup.">
+  <link rel="canonical" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Guida rapida — pagina stampabile, stessa identità visiva di index.html,
+       ma a fondo chiaro (pensata per essere stampata senza sprecare inchiostro). */
+    :root{
+      --gr-ink:#101b17; --gr-green:#0f3d2e; --gr-green-deep:#0a2a20; --gr-gold:#a9812f;
+      --gr-cream:#fbfaf6; --gr-paper:#f3efe6; --gr-line:#d8d2c2; --gr-text:#20291f; --gr-muted:#5b6a58;
+    }
+    *{box-sizing:border-box}
+    body.guide{background:var(--gr-cream);color:var(--gr-text);color-scheme:light;font-family:var(--sans);font-size:15px;line-height:1.55;margin:0}
+    .guide a{color:var(--gr-green);text-decoration:underline;text-underline-offset:2px}
+    .guide a.plain{color:inherit;text-decoration:none}
+    .guide-topbar{background:var(--gr-ink);color:var(--gr-cream)}
+    .guide-topbar-inner{max-width:900px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .guide-brand{display:inline-flex;align-items:center;gap:9px;font-size:17px;font-weight:600;letter-spacing:-.03em}
+    .guide-brand .brand-mark{width:26px;height:26px;background:#23503d;border-radius:8px;display:inline-grid;place-items:center;flex:none}
+    .guide-brand .brand-mark i{width:10px;height:10px;border-radius:100%;background:var(--gr-cream)}
+    .guide-brand .brand-os{color:var(--gr-gold);font-weight:400}
+    .guide-topnav{display:flex;gap:18px;font-size:12.5px}
+    .guide-topnav a{color:var(--muted,#cdd6c8);text-decoration:none}
+    .guide-topnav a:hover{color:var(--gr-cream);text-decoration:underline}
+    .guide-wrap{max-width:900px;margin:0 auto;padding:26px 20px 40px}
+    .guide-hero{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:2px solid var(--gr-ink);padding-bottom:14px;margin-bottom:18px}
+    .guide-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,42px);letter-spacing:-.03em;margin:0;color:var(--gr-ink)}
+    .guide-hero h1 em{font-style:normal;color:var(--gr-gold)}
+    .guide-hero p{margin:6px 0 0;color:var(--gr-muted);font-size:13.5px;max-width:46ch}
+    .guide-meta{font-size:11px;color:var(--gr-muted);text-align:right;line-height:1.7}
+    .guide-map{display:flex;flex-wrap:wrap;gap:6px 8px;margin:0 0 22px;padding:0;list-style:none;font-size:11px}
+    .guide-map li{background:var(--gr-paper);border:1px solid var(--gr-line);border-radius:100px;padding:4px 11px;color:var(--gr-green);font-weight:600}
+    .guide-map.stages li{background:transparent;border-style:dashed;color:var(--gr-muted);font-weight:500}
+    .guide-shots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 22px}
+    .guide-shots figure{margin:0;border:1px solid var(--gr-line);border-radius:6px;overflow:hidden;background:#fff}
+    .guide-shots img{display:block;width:100%;height:70px;object-fit:cover;object-position:top}
+    .guide-shots figcaption{font-size:9.5px;color:var(--gr-muted);padding:4px 6px;border-top:1px solid var(--gr-line)}
+    .guide-columns{columns:2;column-gap:34px}
+    .g-section{break-inside:avoid;margin:0 0 20px}
+    .g-section h2{font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:-.01em;color:var(--gr-ink);margin:0 0 3px;display:flex;align-items:baseline;gap:8px}
+    .g-section h2 .g-num{font-family:var(--sans);font-size:11px;font-weight:700;color:#fff;background:var(--gr-green);border-radius:100%;width:19px;height:19px;display:inline-flex;align-items:center;justify-content:center;flex:none;transform:translateY(-1px)}
+    .g-section p{margin:0 0 7px;font-size:12.6px;line-height:1.55}
+    .g-section ul{margin:0 0 7px;padding-left:17px;font-size:12.6px;line-height:1.5}
+    .g-section li{margin-bottom:3px}
+    .g-section .g-note{font-size:11px;color:var(--gr-muted);border-left:2px solid var(--gr-gold);padding-left:9px;margin-top:6px}
+    .g-label{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:11px;background:var(--gr-paper);border:1px solid var(--gr-line);border-radius:4px;padding:1px 6px;white-space:nowrap}
+    .g-warn{background:#fbf2df;border:1px solid #e3c98c;border-radius:6px;padding:9px 12px;font-size:11.5px;margin-top:6px;line-height:1.5}
+    .g-warn strong{color:#8a5a12}
+    .guide-footer{margin-top:8px;padding-top:14px;border-top:2px solid var(--gr-ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:11px;color:var(--gr-muted)}
+    .guide-footer a{color:var(--gr-green)}
+    .print-only{display:none}
+    @media (max-width:760px){
+      .guide-columns{columns:1}
+      .guide-shots{grid-template-columns:repeat(2,1fr)}
+      .guide-hero{flex-direction:column;align-items:flex-start}
+      .guide-meta{text-align:left}
+    }
+    @media print{
+      .no-print{display:none!important}
+      .print-only{display:block}
+      @page{size:A4;margin:12mm 13mm}
+      body.guide{font-size:10.3px;background:#fff}
+      .guide-wrap{max-width:none;padding:0}
+      .guide-topbar{background:#fff;color:var(--gr-ink);border-bottom:2px solid var(--gr-ink)}
+      .guide-topnav{display:none}
+      .guide-brand{color:var(--gr-ink)}
+      .guide-brand .brand-mark{background:var(--gr-ink)}
+      .guide-hero{padding-bottom:8px;margin-bottom:10px}
+      .guide-hero h1{font-size:24px}
+      .guide-hero p{font-size:10.5px}
+      .guide-map{margin-bottom:10px}
+      .guide-shots{margin-bottom:10px}
+      .guide-shots img{height:52px}
+      .guide-columns{column-gap:24px}
+      .g-section{margin-bottom:11px}
+      .g-section h2{font-size:12.5px}
+      .g-section p,.g-section ul{font-size:10px}
+      a{text-decoration:none}
+      .guide-footer{font-size:9px}
+    }
+  </style>
+</head>
+<body class="guide">
+<div class="guide-topbar no-print">
+  <div class="guide-topbar-inner">
+    <a class="guide-brand plain" href="./"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Biliardo<span class="brand-os">OS</span></span></a>
+    <nav class="guide-topnav" aria-label="Navigazione">
+      <a href="./#download">Scarica</a>
+      <a href="./#domande">Domande frequenti</a>
+      <a href="guida-rapida.pdf">Scarica in PDF</a>
+    </nav>
+  </div>
+</div>
+
+<main class="guide-wrap">
+  <div class="guide-hero">
+    <div>
+      <h1>Guida rapida<br><em>Dal primo avvio al podio.</em></h1>
+      <p>Per chi organizza per la prima volta un campionato a batterie con BiliardoOS. Due pagine, dall’installazione alla chiusura del campionato.</p>
+    </div>
+    <div class="guide-meta">
+      <span class="print-only">plagemes.github.io/biliardoos-releases</span>
+      BiliardoOS per Windows 10/11<br>Manuale completo: voce <strong>Guida</strong> nell’app
+    </div>
+  </div>
+
+  <ul class="guide-map" aria-label="Le 7 aree del menu laterale">
+    <li>Oggi</li><li>Tornei</li><li>Anagrafiche</li><li>Classifiche</li><li>Comunicazioni</li><li>Segreteria</li><li>Impostazioni</li>
+  </ul>
+  <ul class="guide-map stages" aria-label="Le fasi di un campionato">
+    <li>① Impostazione</li><li>② Sorteggio</li><li>③ Convocazioni</li><li>④ Serate</li><li>⑤ Fase finale</li><li>⑥ Chiusura</li>
+  </ul>
+
+  <div class="guide-shots" role="presentation">
+    <figure><img src="screenshots/02-tournament-overview.webp" alt="Panoramica del campionato con le sue fasi"><figcaption>Il campionato, fase per fase</figcaption></figure>
+    <figure><img src="screenshots/03-verbale-sorteggio.webp" alt="Verbale di sorteggio"><figcaption>Sorteggio e verbale</figcaption></figure>
+    <figure><img src="screenshots/06-appello.webp" alt="Schermata dell'appello"><figcaption>Appello in sede</figcaption></figure>
+    <figure><img src="screenshots/08-fase-finale-podio.webp" alt="Fase finale e podio"><figcaption>Fase finale e podio</figcaption></figure>
+  </div>
+
+  <div class="guide-columns">
+
+    <div class="g-section">
+      <h2><span class="g-num">1</span> Installazione</h2>
+      <p>Scarica l’installer dal pulsante <span class="g-label">Scarica per Windows</span> sul sito, poi apri <span class="g-label">BiliardoOS-Setup-*.exe</span>. Non servono permessi da amministratore: si installa per l’utente corrente.</p>
+      <p><strong>Avviso “Windows ha protetto il PC” (SmartScreen):</strong> clicca <span class="g-label">Ulteriori informazioni</span> poi <span class="g-label">Esegui comunque</span>. Compare perché l’eseguibile non è ancora firmato digitalmente, non perché contenga qualcosa di dannoso.</p>
+      <div class="g-warn"><strong>Se il “Controllo dell’app e del browser” blocca l’installazione:</strong> stesso motivo — l’installer di BiliardoOS non ha ancora un certificato di firma del codice. Non è necessario disattivare protezioni di sicurezza di Windows: i tuoi dati non vengono mai toccati da un tentativo non riuscito. Per la situazione completa vedi le <a href="./#faq-windows">Domande frequenti</a> del sito.</div>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">2</span> Primo avvio</h2>
+      <p>Alla prima apertura scegli <span class="g-label">Inizia da zero</span> (o <span class="g-label">Ripristina da una copia</span> se arrivi da un altro PC) nella schermata “Benvenuto in BiliardoOS”.</p>
+      <p>La configurazione guidata copre, in ordine: Intestazione (dati del circolo), Sedi di gioco, Ufficiali di gara, Copia esterna, Assistente AI locale, fino a “Pronti per iniziare”. Ogni voce resta modificabile in seguito da <strong>Anagrafiche</strong> e <strong>Impostazioni</strong>.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">3</span> Crea il campionato</h2>
+      <p>Da <strong>Tornei</strong> apri la creazione di un nuovo campionato a batterie. Il wizard ha 5 passi: <em>Info e gruppi</em> → <em>Distribuzione</em> → <em>Regole sorteggio</em> → <em>Punteggi</em> → <em>Riepilogo</em>.</p>
+      <ul>
+        <li>Scegli <span class="g-label">Singolo</span> o <span class="g-label">Coppie</span> e la <strong>Dimensione Batteria</strong>: 8 o 4 giocatori.</li>
+        <li>Assegna sedi e data a ogni batteria in “Distribuzione”.</li>
+        <li>Le batterie da 8 hanno due orari di chiamata (1ª: posti 1-2 e 5-6; 2ª: posti 3-4 e 7-8); quelle da 4 un solo orario per coppia di posti.</li>
+      </ul>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">4</span> Il sorteggio</h2>
+      <p>Nella fase <strong>Sorteggio</strong>, <span class="g-label">Anteprima sorteggio</span> genera più proposte: scegli quella che preferisci con <span class="g-label">Scegli questo</span> per confermarla — fino ad allora nulla viene salvato.</p>
+      <p>Dopo la conferma ottieni il <strong>Verbale di sorteggio</strong> (esportabile in PDF) e puoi ancora correggere manualmente gli abbinamenti, finché la prima partita di una batteria non ha un risultato.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">5</span> Convocazioni</h2>
+      <p>Nella fase <strong>Convocazioni</strong> scegli il formato tagliando: <span class="g-label">Ticket singolo</span> oppure <span class="g-label">4 per A4</span>. Da qui esporti il PDF e comunichi orari e sede ai referenti via email o WhatsApp.</p>
+      <p class="g-note">Un promemoria automatico può avvisare i convocati il giorno prima della serata.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">6</span> La serata di gara</h2>
+      <p>Nella fase <strong>Serate</strong>, gruppo “Prima”: prepara il kit serata (referti di batteria, cartelli tavoli, copie di riserva) da portare in sede.</p>
+      <p>Gruppo “Durante” — <strong>Appello</strong>: segna ogni giocatore <span class="g-label">Presente</span> o <span class="g-label">Assente</span> all’orario di chiamata. Poi inserisci i risultati batteria per batteria: il pulsante con il nome del vincitore (es. “Vince Mario Rossi”) registra l’esito.</p>
+      <p>Gruppo “Dopo”: quando tutte le batterie hanno un risultato, <span class="g-label">Chiudi la serata</span>; poi <span class="g-label">Invia i risultati</span> ai giocatori.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">7</span> Fase finale e classifiche</h2>
+      <p>Completate le batterie qualificanti, <span class="g-label">Genera la fase finale</span> crea il tabellone a eliminazione; registra i risultati fino al podio (campione, 2° posto, 3°-4° posto).</p>
+      <p>Le <strong>Classifiche</strong> di stagione (menu laterale) si aggiornano da sole, per giocatore e per gruppo sportivo, e restano consultabili anche a campionato concluso.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">8</span> Chiusura del campionato</h2>
+      <p>Quando il podio è definito e ogni serata è chiusa, la fase <strong>Chiusura</strong> propone <span class="g-label">Chiudi il campionato</span>: da qui generi il pacchetto finale, il report del torneo e l’esportazione Excel. Il campionato resta consultabile anche archiviato.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">9</span> Backup e più PC</h2>
+      <p>Da <strong>Impostazioni → Backup</strong>: crea un backup manuale in ogni momento, ripristina o esporta un backup precedente. Ogni aggiornamento dell’app crea comunque un backup automatico prima di installarsi.</p>
+      <p>Per lavorare da più di un PC (casa e portatile, o sede remota) usa la funzione facoltativa <strong>Casa + Portatile</strong> in Impostazioni, oppure una copia di sicurezza esterna su OneDrive/USB/NAS.</p>
+    </div>
+
+    <div class="g-section">
+      <h2><span class="g-num">10</span> Serve aiuto?</h2>
+      <ul>
+        <li><strong>Guida in-app</strong>: voce “Guida” nel menu laterale, con lo stesso percorso di questa pagina e tutte le funzionalità avanzate spiegate una per una.</li>
+        <li><strong>Assistente AI</strong> (opzionale, locale): chiedi come si usa una funzione o interroga i dati del tuo campionato, senza inviare nulla online.</li>
+        <li><strong>Un problema tecnico?</strong> Impostazioni → “Segnala un problema” prepara un pacchetto diagnostico, senza dati personali dei giocatori, da allegare a una segnalazione.</li>
+        <li><strong>Domande, idee o bug</strong>: <a href="https://github.com/Plagemes/biliardoos-releases/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a> per confronto e idee, <a href="https://github.com/Plagemes/biliardoos-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">GitHub Issues</a> per segnalare un malfunzionamento.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="guide-footer">
+    <span>© <span id="gr-year">2026</span> Plagemes · BiliardoOS, guida rapida</span>
+    <span class="no-print"><a href="./">Sito di BiliardoOS</a> · <a href="https://github.com/Plagemes/biliardoos-releases#readme" target="_blank" rel="noopener noreferrer">README</a> · <a href="guida-rapida.pdf">Versione PDF</a></span>
+  </div>
+</main>
+<script>try{document.getElementById('gr-year').textContent=new Date().getFullYear()}catch(e){}</script>
+</body>
+</html>

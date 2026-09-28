@@ -17,6 +17,8 @@
 
 🔗 Link da condividere: **https://plagemes.github.io/biliardoos-releases/**
 
+📄 Organizzi per la prima volta? Leggi la [**Guida rapida**](https://plagemes.github.io/biliardoos-releases/guida-rapida.html) (anche in [PDF](https://plagemes.github.io/biliardoos-releases/guida-rapida.pdf))
+
 *Gratuito, per Windows 10/11 - vedi [Installazione](#installazione) per l'avviso di SmartScreen*
 
 </div>
@@ -175,7 +177,7 @@ attivati dall'utente, per l'invio effettivo di email/messaggi WhatsApp.
 ## FAQ
 
 **Devo pagare qualcosa?**
-No, BiliardoOS è gratuito.
+No: la versione Base di BiliardoOS è gratuita da scaricare e usare.
 
 **Serve un account o un abbonamento a qualche servizio cloud?**
 No. I dati restano sul PC. WhatsApp ed email sono facoltativi e usano il

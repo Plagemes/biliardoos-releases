@@ -1,108 +1,163 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BiliardoOS – Scarica</title>
-<meta name="description" content="Gestionale gratuito per campionati a batterie di biliardo e boccette: sorteggio, convocazioni, appello, risultati, classifiche, WhatsApp ed email, assistente AI locale.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="BiliardoOS">
-<meta property="og:title" content="BiliardoOS – Gestione campionati a batterie di biliardo">
-<meta property="og:description" content="Gratuito per Windows 10/11. Sorteggio, convocazioni, appello, risultati, classifiche, WhatsApp/email e assistente AI locale. Tocca per scaricare.">
-<meta property="og:url" content="https://plagemes.github.io/biliardoos-releases/">
-<meta property="og:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="640">
-<meta property="og:image:alt" content="BiliardoOS – Gestione campionati a batterie di biliardo">
-<meta property="og:locale" content="it_IT">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BiliardoOS – Gestione campionati a batterie di biliardo">
-<meta name="twitter:description" content="Gratuito per Windows 10/11. Tocca per scaricare.">
-<meta name="twitter:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
-<link rel="icon" href="logo.png">
-<style>
-  :root { --green:#1f9d5c; --dark:#10231a; --bg:#f6f8f7; --text:#1b1f1d; --muted:#5b6660; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); }
-  header { background:linear-gradient(135deg,#1f9d5c,#157a47); color:#fff; padding:48px 16px 56px; text-align:center; }
-  header img { width:96px; height:96px; }
-  h1 { font-size:2.4rem; margin:12px 0 4px; }
-  header p { margin:0; font-size:1.1rem; opacity:.95; }
-  main { max-width:760px; margin:-32px auto 48px; padding:0 16px; }
-  .card { background:#fff; border-radius:16px; padding:28px; box-shadow:0 6px 24px rgba(0,0,0,.08); text-align:center; }
-  .btn { display:inline-block; background:var(--green); color:#fff; text-decoration:none; font-weight:700; font-size:1.2rem; padding:16px 28px; border-radius:12px; }
-  .btn:hover { background:#178a50; }
-  .meta { color:var(--muted); margin-top:12px; font-size:.95rem; }
-  .status { margin-top:16px; font-size:.95rem; color:var(--muted); min-height:1.2em; }
-  h2 { font-size:1.2rem; margin:28px 0 8px; text-align:left; }
-  ol, ul { text-align:left; line-height:1.6; }
-  .links { margin-top:24px; font-size:.95rem; }
-  .links a { color:var(--green); }
-  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:24px 16px; }
-  img.shot { width:100%; border-radius:12px; border:1px solid #e3e8e5; margin-top:20px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b17">
+  <title>BiliardoOS — Il gioco, a voi. La regia, a noi.</title>
+  <meta name="description" content="Il gestionale gratuito per campionati di biliardo e boccette. Sorteggi, convocazioni, risultati, WhatsApp e AI locale: dal primo sorteggio al podio. Per Windows 10 e 11.">
+  <link rel="canonical" href="https://plagemes.github.io/biliardoos-releases/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BiliardoOS">
+  <meta property="og:title" content="BiliardoOS — Il gioco, a voi. La regia, a noi.">
+  <meta property="og:description" content="La passione del circolo. L'ordine di un sistema. Il gestionale gratuito per campionati di biliardo e boccette, sul tuo PC Windows.">
+  <meta property="og:url" content="https://plagemes.github.io/biliardoos-releases/">
+  <meta property="og:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="BiliardoOS, gestionale per campionati a batterie di biliardo e boccette">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BiliardoOS — La regia del tuo campionato">
+  <meta name="twitter:description" content="Dal primo sorteggio all'ultimo punto. Gratuito, per Windows 10 e 11.">
+  <meta name="twitter:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="logo.png">
+  <link rel="preload" href="assets/club.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"BiliardoOS","description":"Gestionale desktop per campionati a batterie di biliardo e boccette.","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"url":"https://plagemes.github.io/biliardoos-releases/","downloadUrl":"https://github.com/Plagemes/biliardoos-releases/releases/latest","inLanguage":"it","author":{"@type":"Person","name":"Plagemes"},"license":"https://github.com/Plagemes/biliardoos-releases/blob/main/LICENSE"}</script>
 </head>
 <body>
-<header>
-  <img src="logo.png" alt="Logo BiliardoOS">
-  <h1>BiliardoOS</h1>
-  <p>Gestione campionati a batterie di biliardo e boccette</p>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-windows" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m2 4 9-1v8H2zm11-1.2L22 1v10h-9zM2 13h9v8l-9-1zm11 0h9v10l-9-1.8z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6L12 3Z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 13 4-4m-5 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m0 12a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8m-4-5v5"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 1 1 19 0Z"/><path d="M7 10h9m-9 4h6"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0V3Zm5 11v6m-4 1h8M7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="BiliardoOS, inizio pagina"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Biliardo<span class="brand-os">OS</span></span></a>
+    <nav class="desktop-nav" aria-label="Navigazione principale"><a href="#sistema">Il sistema</a><a href="#esperienza">L’esperienza</a><a href="#domande">Domande</a></nav>
+    <a class="header-download" href="#download">Scarica gratis <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Apri il menu"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navigazione mobile" hidden><a href="#sistema">Il sistema <span>01</span></a><a href="#esperienza">L’esperienza <span>02</span></a><a href="#domande">Domande <span>03</span></a><a href="#download">Scarica BiliardoOS <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a></nav>
 </header>
-<main>
-  <div class="card">
-    <a id="dl" class="btn" href="https://github.com/Plagemes/biliardoos-releases/releases/latest">⬇️ Scarica BiliardoOS</a>
-    <div class="meta" id="ver">Gratuito · Windows 10/11</div>
-    <div class="status" id="status"></div>
 
-    <h2>Installazione</h2>
-    <ol>
-      <li>Apri il file <strong>BiliardoOS-Setup</strong> appena scaricato.</li>
-      <li>Se Windows mostra <strong>"Windows ha protetto il PC"</strong> (SmartScreen), clicca <strong>Ulteriori informazioni</strong> e poi <strong>Esegui comunque</strong>: il programma è gratuito ma non ha una firma digitale a pagamento.</li>
-      <li>Al primo avvio parte una configurazione guidata. Gli aggiornamenti successivi arrivano da soli.</li>
-    </ol>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero-image" src="assets/club.webp" alt="Un tavolo di biliardo a boccette, sul panno verde sotto la luce calda di una lampada in ottone" width="1440" height="810" fetchpriority="high">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="eyebrow hero-eyebrow"><span class="small-line"></span> La passione incontra l’organizzazione</p>
+      <h1 id="hero-title">Il gioco, a voi.<br><em>La regia, a noi.</em></h1>
+      <p class="hero-description">Dal primo sorteggio all’ultimo punto.<br>Il gestionale per i campionati di biliardo e boccette, pensato per chi tiene insieme la serata.</p>
+      <div class="hero-actions"><a class="button button-cream" data-download href="https://github.com/Plagemes/biliardoos-releases/releases/latest"><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg> Scarica per Windows <svg class="icon button-arrow" aria-hidden="true"><use href="#i-down"/></svg></a><a class="text-link" href="#sistema">Scopri il sistema <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <p class="hero-note">Gratuito <span>·</span> Windows 10 / 11 <span>·</span> Nessun abbonamento</p>
+    </div>
+    <div class="hero-caption" aria-hidden="true"><span>Il rito è lo stesso.</span><span>L’organizzazione, no.</span></div>
+    <div class="container hero-bottom"><a href="#sistema" class="scroll-link"><span class="scroll-rule" aria-hidden="true"></span> Entra in BiliardoOS</a><span class="hero-bottom-note">Fatto per il tuo circolo. Pronto per la tua serata.</span></div>
+  </section>
 
-    <h2>Cosa fa</h2>
-    <ul>
-      <li>Sorteggio delle batterie con regole (nessuno gioca nel proprio bar, disponibilità, teste di serie) e verbale.</li>
-      <li>Tagliandi di convocazione (4 per A4 o singoli) e invio a bar e giocatori via WhatsApp ed email.</li>
-      <li>Appello, risultati, fase finale, classifiche e stagioni.</li>
-      <li>Assistente AI che gira sul tuo PC; i dati restano sul tuo computer.</li>
-    </ul>
-
-    <img class="shot" src="screenshots/02-tournament-overview.png" alt="Schermata di BiliardoOS">
-
-    <div class="links">
-      <a href="https://github.com/Plagemes/biliardoos-releases">Pagina del progetto</a> ·
-      <a href="https://github.com/Plagemes/biliardoos-releases/releases">Tutte le versioni</a> ·
-      <a href="https://github.com/Plagemes/biliardoos-releases/discussions">Domande e idee</a>
+  <div class="trust-strip">
+    <div class="container trust-grid">
+      <div><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><p><strong>Dal sorteggio al podio</strong><span>Ogni fase, nello stesso posto.</span></p></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><p><strong>A casa. In sede. Anche offline.</strong><span>Il campionato viaggia con te.</span></p></div>
+      <div><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong>Il tuo PC, i tuoi dati</strong><span>Database e assistente AI locali.</span></p></div>
     </div>
   </div>
+
+  <section class="system light-section" id="sistema" aria-labelledby="system-title">
+    <div class="container">
+      <div class="section-heading" data-reveal><div><p class="eyebrow"><span class="section-number">01</span> Una regia completa</p><h2 id="system-title">Tutto il campionato.<br><em>Un solo posto.</em></h2></div><p class="section-intro">Iscrizioni, incastri, messaggi dell’ultimo minuto. Finalmente un ambiente di lavoro che conosce il ritmo di un campionato a batterie.</p></div>
+      <div class="feature-points" data-reveal>
+        <div><span class="point-index">01 /</span><h3>Prima, tutto pronto.</h3><p>Batterie da 4 o 8, singoli o coppie. Sorteggi con regole, sedi e disponibilità. Tagliandi pronti da stampare o inviare.</p></div>
+        <div><span class="point-index">02 /</span><h3>In gara, tutto chiaro.</h3><p>Appello, ritardi, punteggi e qualificazioni. Segui la serata senza perdere il filo, fino alla fase finale.</p></div>
+        <div><span class="point-index">03 /</span><h3>Dopo, resta la storia.</h3><p>Classifiche di stagione, statistiche e albo d’oro. Ogni risultato trova il suo posto, anche a campionato concluso.</p></div>
+      </div>
+      <div class="product-showcase" data-reveal>
+        <div class="showcase-heading"><span class="eyebrow">Dentro BiliardoOS</span><span class="showcase-hint">Schermate reali. Nessuna simulazione.</span></div>
+        <div class="tabs" role="tablist" aria-label="Esplora le schermate del gestionale">
+          <button type="button" role="tab" id="tab-campionato" aria-selected="true" aria-controls="screen-panel" tabindex="0" data-screen="0">Campionato</button>
+          <button type="button" role="tab" id="tab-sorteggio" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="1">Sorteggio</button>
+          <button type="button" role="tab" id="tab-convocazioni" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="2">Convocazioni</button>
+          <button type="button" role="tab" id="tab-risultati" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="3">Risultati</button>
+          <button type="button" role="tab" id="tab-classifiche" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="4">Classifiche</button>
+          <button type="button" role="tab" id="tab-messaggi" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="5">Comunicazioni</button>
+          <button type="button" role="tab" id="tab-ai" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="6">Assistente AI</button>
+        </div>
+        <div class="screen-panel" id="screen-panel" role="tabpanel" aria-labelledby="tab-campionato" tabindex="0">
+          <div class="app-frame"><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>BiliardoOS <span class="frame-separator">/</span> <span id="screen-label">Il tuo campionato</span></span><span class="frame-local"><i></i> Sul tuo PC</span></div><a class="screen-link" id="screen-link" href="screenshots/02-tournament-overview.png" aria-label="Ingrandisci la schermata del campionato"><img id="product-screen" src="screenshots/02-tournament-overview.png" alt="BiliardoOS: panoramica del campionato con fasi, vincitore e strumenti di chiusura" width="1366" height="768" loading="lazy" decoding="async"><span class="zoom-pill"><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg> Ingrandisci</span></a></div>
+          <div class="screen-caption"><p id="screen-description">Dall’impostazione alla chiusura: le fasi del campionato, il prossimo passo e gli strumenti che ti servono, in un’unica vista.</p><span id="screen-count" aria-hidden="true">01 <i>/ 07</i></span></div>
+        </div>
+        <noscript><p>Puoi consultare tutte le <a href="https://github.com/Plagemes/biliardoos-releases/tree/main/docs/screenshots">schermate del programma su GitHub</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="esperienza" aria-labelledby="experience-title">
+    <div class="experience-photo"><img src="assets/club.webp" alt="Boccette avorio e rosse e il castello di birilli sul tavolo del circolo" width="1440" height="810" loading="lazy" decoding="async"><span class="photo-caption">La sala. Le persone. La passione.</span><span class="photo-corner" aria-hidden="true">B<span>OS</span></span></div>
+    <div class="experience-copy" data-reveal><p class="eyebrow"><span class="section-number">02</span> L’anima resta quella del circolo</p><h2 id="experience-title">Meno cose<br>da rincorrere.<br><em>Più serate da vivere.</em></h2><p>Il bello non è gestire un foglio di calcolo. È aprire la sala, ritrovare le persone e sentire il primo punto sul panno.</p><p>BiliardoOS mette in ordine quello che c’è dietro. Così chi organizza può tornare a esserci, davvero.</p><a class="text-link" href="#download">Portalo nel tuo circolo <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </section>
+
+  <section class="intelligence" aria-labelledby="intelligence-title">
+    <div class="container">
+      <div class="intelligence-top"><div data-reveal><p class="eyebrow"><span class="section-number">03</span> Tecnologia discreta. Aiuto concreto.</p><h2 id="intelligence-title">Intelligente, sì.<br><em>Ma dalla tua parte.</em></h2><p class="intelligence-intro">Un aiuto quando serve. Il controllo dove deve stare: nelle tue mani.</p></div><figure class="precision-figure" data-reveal><img src="assets/precision.svg" alt="Illustrazione geometrica del castello a cinque birilli, racchiuso nelle linee di un tavolo: precisione e controllo" width="480" height="320" loading="lazy"><figcaption>La precisione, dietro ogni serata.</figcaption></figure></div>
+      <div class="intelligence-grid" data-reveal>
+        <article><svg class="feature-icon" aria-hidden="true"><use href="#i-spark"/></svg><h3>Un assistente. Sul tuo PC.</h3><p>Chiedi come usare il programma o consulta i dati del campionato. L’assistente AI lavora in locale, senza inviare le domande a un servizio AI cloud.</p><span class="detail-tag">AI locale · Ollama</span></article>
+        <article><svg class="feature-icon" aria-hidden="true"><use href="#i-message"/></svg><h3>Messaggi che trovano la strada.</h3><p>Tagliandi e comunicazioni via WhatsApp o email. Invii programmati, stato della coda e orari di silenzio: sai cosa parte e quando.</p><span class="detail-tag">WhatsApp · Email · PDF</span></article>
+        <article><svg class="feature-icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>I tuoi dati, al loro posto.</h3><p>Database locale, backup e blocco dell’app. Collega casa e portatile quando ne hai bisogno, oppure gestisci la serata offline.</p><span class="detail-tag">Backup · Casa / portatile</span></article>
+      </div>
+      <p class="connectivity-note">Internet è necessario per download, aggiornamenti e servizi di comunicazione o sincronizzazione attivati. Il lavoro quotidiano sul campionato può restare offline.</p>
+    </div>
+  </section>
+
+  <section class="download-section light-section" id="download" aria-labelledby="download-title">
+    <div class="container">
+      <div class="download-top" data-reveal>
+        <div class="download-copy"><p class="eyebrow"><span class="section-number">04</span> La prossima serata comincia qui</p><h2 id="download-title">Accendi il PC.<br><em>Il resto prende forma.</em></h2><p>Niente account BiliardoOS da creare.<br>Nessun abbonamento. Solo il tuo prossimo campionato.</p></div>
+        <div class="download-card"><div class="download-card-top"><span class="brand-mark" aria-hidden="true"><i></i></span><span class="release-badge"><i></i> <span data-version>Ultima versione</span></span></div><h3>BiliardoOS per Windows</h3><p class="download-specs">Windows 10 / 11 <span>·</span> 64 bit <span data-size></span></p><a id="dl" class="button button-dark" data-download href="https://github.com/Plagemes/biliardoos-releases/releases/latest"><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg> Scarica gratuitamente <svg class="icon button-arrow" aria-hidden="true"><use href="#i-down"/></svg></a><p class="download-assurance">Freeware. Nessun costo per il software.</p><div class="release-links"><a href="https://github.com/Plagemes/biliardoos-releases/releases/latest" target="_blank" rel="noopener noreferrer">Novità della versione <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://github.com/Plagemes/biliardoos-releases/releases" target="_blank" rel="noopener noreferrer">Tutte le versioni</a></div><p id="device-note" class="device-note" hidden>Sei su un altro dispositivo? Il programma si installa sul tuo PC Windows.</p><button id="copy-link" class="copy-link" type="button"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg> Copia il link per il tuo PC</button><p id="download-status" class="download-status" role="status" aria-live="polite"></p></div>
+      </div>
+      <div class="installation-steps" data-reveal>
+        <div><span>01</span><h3>Scarica l’installer</h3><p>Il pulsante porta all’ultima versione pubblicata nel repository del progetto.</p></div>
+        <div><span>02</span><h3>Installa e configura</h3><p>Apri il file BiliardoOS-Setup e segui la configurazione guidata al primo avvio.</p></div>
+        <div><span>03</span><h3>Prepara il campionato</h3><p>Inserisci sedi e giocatori. La guida e l’assistente sono già dentro l’app.</p></div>
+      </div>
+      <p class="install-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Windows mostra un avviso all’installazione? <a href="#faq-windows" data-open-faq="faq-windows">Leggi prima le indicazioni su SmartScreen.</a></span></p>
+    </div>
+  </section>
+
+  <section class="faq-section light-section" id="domande" aria-labelledby="faq-title">
+    <div class="container faq-layout"><div class="faq-heading" data-reveal><p class="eyebrow">Prima di cominciare</p><h2 id="faq-title">Due dubbi?<br><em>Facciamo chiarezza.</em></h2><p>Per il resto, c’è una comunità<br>con cui parlarne.</p><a class="text-link dark-link" href="https://github.com/Plagemes/biliardoos-releases/discussions" target="_blank" rel="noopener noreferrer">Domande e idee <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div class="faq-list" data-reveal>
+        <details><summary>È davvero gratuito?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>Sì. BiliardoOS è freeware: puoi usarlo gratuitamente, senza un abbonamento al software. Non è open source: tutti i diritti sono riservati. Le condizioni complete sono nella <a href="https://github.com/Plagemes/biliardoos-releases/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">licenza del progetto</a>.</p></div></details>
+        <details><summary>Per quali campionati è pensato?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>Per campionati amatoriali di biliardo e boccette tra bar, circoli e associazioni: batterie da 4 o 8 giocatori, singoli o coppie, seguite dalla fase finale. Il sorteggio tiene conto delle regole configurate, come sedi, disponibilità e teste di serie.</p></div></details>
+        <details><summary>Posso usarlo senza Internet?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>Sì, per il lavoro quotidiano: sorteggio, convocazioni stampate, appello, risultati e classifiche. Internet serve per scaricare l’app e il modello AI, ricevere gli aggiornamenti e usare funzioni online come l’invio di WhatsApp ed email.</p></div></details>
+        <details><summary>Come funzionano l’AI e i miei dati?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>Il database del campionato e l’assistente AI risiedono sul PC. L’AI locale usa Ollama e richiede il download iniziale di un modello, scelto in base all’hardware. Le comunicazioni e le opzioni di sincronizzazione, quando attivate, utilizzano i rispettivi servizi esterni.</p></div></details>
+        <details><summary>Funziona anche sul telefono o su un Mac?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>L’app desktop è disponibile per Windows 10 e 11 a 64 bit. Il telefono può essere usato per le funzioni dedicate ai risultati tramite il collegamento locale, configurato dal PC. Non è un’app nativa per Android, iPhone o macOS.</p></div></details>
+        <details id="faq-windows"><summary>Perché Windows mostra un avviso?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>L’installer attualmente distribuito non è firmato digitalmente e Windows può mostrare un avviso SmartScreen. Scarica solo dalle release del repository del progetto e controlla il file con la protezione di Windows prima di procedere. Un avviso, da solo, non prova che un file sia sicuro o pericoloso: se non sei certo della provenienza, non eseguirlo.</p><p>Trovi altri dettagli nelle <a href="https://github.com/Plagemes/biliardoos-releases/blob/main/README.it.md#installazione" target="_blank" rel="noopener noreferrer">istruzioni di installazione</a>.</p></div></details>
+        <details><summary>Gli aggiornamenti e il supporto sono inclusi?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p>L’app controlla le nuove versioni all’avvio; puoi farlo anche da Impostazioni → Aggiornamenti. Gli aggiornamenti sono preceduti da un backup e non vengono installati durante una serata di gara aperta. Per domande usa <a href="https://github.com/Plagemes/biliardoos-releases/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>; per segnalare un problema apri una <a href="https://github.com/Plagemes/biliardoos-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">segnalazione su GitHub</a>. Il programma è fornito senza garanzie, secondo la licenza.</p></div></details>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Plagemes · Freeware, tutti i diritti riservati · Non è un prodotto ufficiale UISP</footer>
-<script>
-(function () {
-  var btn = document.getElementById('dl');
-  var ver = document.getElementById('ver');
-  var status = document.getElementById('status');
-  var noAuto = /[?&]noauto\b/.test(location.search);
-  fetch('https://api.github.com/repos/Plagemes/biliardoos-releases/releases/latest')
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function (rel) {
-      var exe = (rel.assets || []).filter(function (a) { return /\.exe$/i.test(a.name) && !/blockmap/i.test(a.name); })[0];
-      if (!exe) return;
-      btn.href = exe.browser_download_url;
-      var mb = Math.round(exe.size / 1048576);
-      ver.textContent = 'Versione ' + rel.tag_name.replace(/^v/, '') + ' · Gratuito · Windows 10/11 · ' + mb + ' MB';
-      if (!noAuto) {
-        status.textContent = 'Il download partirà tra pochi secondi…';
-        setTimeout(function () {
-          status.textContent = 'Download avviato. Se non parte, usa il pulsante qui sopra.';
-          window.location.href = exe.browser_download_url;
-        }, 2500);
-      }
-    })
-    .catch(function () { /* fallback: the button already points to the latest release page */ });
-})();
-</script>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="brand" href="#top" aria-label="BiliardoOS, torna all’inizio"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Biliardo<span class="brand-os">OS</span></span></a><p>La passione del circolo.<br>L’ordine di un sistema.</p></div><nav aria-label="Collegamenti del progetto"><a href="https://github.com/Plagemes/biliardoos-releases" target="_blank" rel="noopener noreferrer">Il progetto <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://github.com/Plagemes/biliardoos-releases/releases" target="_blank" rel="noopener noreferrer">Tutte le versioni</a><a href="https://github.com/Plagemes/biliardoos-releases/discussions" target="_blank" rel="noopener noreferrer">Domande e idee</a><a href="https://github.com/Plagemes/biliardoos-releases/issues/new/choose" target="_blank" rel="noopener noreferrer">Segnala un problema</a></nav><a class="back-top" href="#top" aria-label="Torna all’inizio"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><div class="footer-bottom"><p>© <span id="year">2026</span> Plagemes <span>·</span> Freeware, tutti i diritti riservati.</p><p>Un progetto indipendente. Non è un prodotto ufficiale UISP.</p></div></div></footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Schermata ingrandita di BiliardoOS"><div class="lightbox-toolbar"><span id="lightbox-title">BiliardoOS</span><button id="lightbox-close" type="button" aria-label="Chiudi la schermata ingrandita"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><img id="lightbox-image" alt="" width="1366" height="768"></dialog>
 </body>
 </html>

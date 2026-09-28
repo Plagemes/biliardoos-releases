@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b17">
+  <title>Pagina non trovata — BiliardoOS</title>
+  <meta name="description" content="La pagina che cerchi non esiste o è stata spostata. Torna alla home di BiliardoOS o consulta la guida rapida.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .not-found{min-height:calc(100dvh - 82px);background:var(--ink)}
+    .not-found-inner{width:100%;box-sizing:border-box;padding:96px 0;text-align:center}
+    .not-found-code{font-family:var(--serif);font-size:clamp(72px,14vw,160px);color:var(--gold);line-height:1;margin-bottom:18px}
+    .not-found h1{font-size:clamp(28px,4vw,44px);margin-bottom:18px}
+    .not-found p{color:#c3ccc2;font-size:14px;max-width:480px;margin:0 auto 34px}
+    .not-found-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center}
+  </style>
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="./" aria-label="BiliardoOS, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Biliardo<span class="brand-os">OS</span></span></a>
+  </div>
+</header>
+<main id="main">
+  <section class="not-found">
+    <div class="container not-found-inner">
+      <p class="not-found-code">404</p>
+      <h1>Questa pagina non esiste.<br><em>This page does not exist.</em></h1>
+      <p>Il collegamento potrebbe essere sbagliato o la pagina è stata spostata. Torna alla home o consulta la guida rapida.<br>The link may be wrong, or the page has moved. Go back to the homepage or check the quick guide.</p>
+      <div class="not-found-actions">
+        <a class="button button-cream" href="./">Home (IT) <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="button button-dark" href="en/">Home (EN) <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="text-link" href="guida-rapida.html" style="color:#c3ccc2">Guida rapida <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  </defs>
+</svg>
+</body>
+</html>

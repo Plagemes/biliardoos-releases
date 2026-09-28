@@ -4,18 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0b1713">
-  <title>BiliardoOS — Guida rapida / Quick guide</title>
-  <meta name="description" content="Guida rapida bilingue di BiliardoOS: installazione, primo avvio, sorteggio, convocazioni, serata di gara, fase finale, backup e supporto.">
+  <title>BiliardoOS — Guida rapida: dal sorteggio al podio</title>
+  <meta name="description" content="Guida rapida bilingue di BiliardoOS: installazione, sorteggio batterie, convocazioni, serata di gara, fase finale e backup.">
   <link rel="canonical" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html">
   <link rel="alternate" hreflang="it" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html?lang=it">
   <link rel="alternate" hreflang="en" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BiliardoOS">
-  <meta property="og:title" content="BiliardoOS — Guida rapida / Quick guide">
+  <meta property="og:title" content="BiliardoOS — Guida rapida: dal sorteggio al podio">
   <meta property="og:description" content="Dal primo avvio al podio. From first launch to the podium.">
-  <meta property="og:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.png">
+  <meta property="og:image" content="https://plagemes.github.io/biliardoos-releases/social-preview.webp">
+  <meta property="og:image:width" content="1583">
+  <meta property="og:image:height" content="722">
+  <meta property="og:image:type" content="image/webp">
   <style>
     :root{
       --ink:#0b1713;--ink-2:#10251d;--green:#0f3d2e;--green-2:#1b5d46;--gold:#c8a15a;
@@ -45,6 +51,26 @@
     @media(max-width:560px){.brand{font-size:18px}.mark{width:30px;height:30px}.pdf-link{padding:0 12px}.lang button{padding:0 9px}.hero h1{font-size:58px}.hero-inner{min-height:auto}.hero-card{padding:17px;border-radius:20px}.flow-row{grid-template-columns:26px 1fr}.flow-row small{display:none}.route{grid-template-columns:repeat(2,1fr)}.route-item{min-height:116px}.section h2{font-size:44px}.chapter-num{font-size:46px}.chapter-head h3{font-size:31px}.step{padding:21px;min-height:auto}.cta-actions{display:grid}.top-actions{gap:6px}}
     @media print{.topbar,.cta,footer,.no-print{display:none!important}body{background:white}.hero{background:white;color:var(--ink)}.hero-inner{min-height:0;padding:25px;grid-template-columns:1fr}.hero h1{font-size:56px}.hero-lead{color:var(--muted)}.hero-card{display:none}.hero:after{display:none}.section{padding:25px}.steps{grid-template-columns:1fr 1fr}.step{break-inside:avoid}.chapter{break-before:page}.lang-panel[hidden]{display:none!important}}
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"BreadcrumbList","@id":"https://plagemes.github.io/biliardoos-releases/guida-rapida.html#breadcrumb","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"BiliardoOS","item":"https://plagemes.github.io/biliardoos-releases/"},
+      {"@type":"ListItem","position":2,"name":"Guida rapida","item":"https://plagemes.github.io/biliardoos-releases/guida-rapida.html"}
+    ]},
+    {"@type":"HowTo","@id":"https://plagemes.github.io/biliardoos-releases/guida-rapida.html#howto","name":"Come organizzare un campionato a batterie con BiliardoOS","description":"Guida rapida per installare BiliardoOS, configurare il campionato, gestire sorteggio, convocazioni, serata di gara, fase finale e backup.","inLanguage":"it","totalTime":"P1D","step":[
+      {"@type":"HowToStep","position":1,"name":"Installazione","text":"Scarica BiliardoOS dal sito o dalla pagina Releases del repository ufficiale, quindi avvia il file BiliardoOS-Setup."},
+      {"@type":"HowToStep","position":2,"name":"Primo avvio","text":"Scegli Inizia da zero oppure Ripristina da una copia, inserisci i dati del circolo e configura sedi e ufficiali di gara."},
+      {"@type":"HowToStep","position":3,"name":"Crea il campionato","text":"Avvia un nuovo campionato a batterie da 4 o 8, singolo o a coppie, assegnando sedi, date e orari di chiamata."},
+      {"@type":"HowToStep","position":4,"name":"Sorteggio","text":"Genera l'anteprima del sorteggio e conferma per creare il verbale di sorteggio con seed tracciabile e riproducibile."},
+      {"@type":"HowToStep","position":5,"name":"Convocazioni","text":"Esporta i tagliandi come ticket singolo o quattro per foglio A4, oppure invia le comunicazioni via email e WhatsApp."},
+      {"@type":"HowToStep","position":6,"name":"Serata di gara","text":"Usa l'Appello per segnare presenti e assenti, quindi inserisci i risultati batteria per batteria."},
+      {"@type":"HowToStep","position":7,"name":"Fase finale","text":"Genera la fase finale a eliminazione diretta e registra ogni esito fino al podio."},
+      {"@type":"HowToStep","position":8,"name":"Classifiche e chiusura","text":"Consulta le classifiche di stagione e chiudi il campionato per generare report ed esportazione Excel."},
+      {"@type":"HowToStep","position":9,"name":"Backup e più PC","text":"Crea ed esporta backup da Impostazioni, e collega casa e portatile quando necessario."},
+      {"@type":"HowToStep","position":10,"name":"Serve aiuto?","text":"Consulta la guida in-app, l'assistente AI locale o apri una segnalazione su GitHub Discussions/Issues."}
+    ]}
+  ]}
+  </script>
 </head>
 <body>
 <a class="skip" href="#guide">Skip / Vai al contenuto</a>
@@ -217,7 +243,7 @@
     const homeHref = lang === 'en' ? './en/' : './';
     document.getElementById('back-home').href = homeHref;
     document.getElementById('cta-home').href = homeHref;
-    document.title = lang === 'en' ? 'BiliardoOS — Quick guide' : 'BiliardoOS — Guida rapida';
+    document.title = lang === 'en' ? 'BiliardoOS — Quick guide to your heat championship' : 'BiliardoOS — Guida rapida: dal sorteggio al podio';
     if(push){ const u = new URL(location.href); u.searchParams.set('lang',lang); history.replaceState(null,'',u); }
   }
   buttons.forEach(b => b.addEventListener('click',()=>apply(b.dataset.lang)));

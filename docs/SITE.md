@@ -41,3 +41,13 @@ Controllati layout da 320 a 1920 pixel, sette schermate e relativi testi, tasti 
 Per aggiornare la galleria, modificare l'array `screens` in `app.js` e le schede corrispondenti in `index.html`. Aggiornare i contenuti quando cambiano requisiti, licenza o funzioni distribuite. Versione e dimensione dell'installer non sono fissate nel codice.
 
 Il branch `backup/site-before-redesign-20260928` conserva il sito precedente, incluse le schermate aggiornate prima della pubblicazione. La cronologia Git rimane intatta.
+
+## SEO avanzato (28 settembre 2026)
+
+- `sitemap.xml` (con alternate hreflang it/en/x-default e lastmod) e `robots.txt` in radice, referenziati a vicenda.
+- `404.html` in stile con il resto del sito, `meta robots noindex`.
+- `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`: generati da `assets/mark.svg` (rounded-rect + due cerchi) via System.Drawing, nessun servizio esterno. `site.webmanifest` li referenzia con path assoluti `/biliardoos-releases/...`.
+- JSON-LD in `@graph` su ogni pagina: `SoftwareApplication` (con `softwareVersion` allineato all'ultima release — da aggiornare a mano a ogni release importante), `WebSite`, `Person` (autore), `FAQPage` (su index/en, dal contenuto FAQ visibile). `guida-rapida.html` aggiunge `BreadcrumbList` e `HowTo` con i 10 passaggi della guida.
+- Corretti `og:image:type` (era `image/jpeg` per un file `.webp`) e le dimensioni reali dell'immagine (1583×722, non 1730×909); `guida-rapida.html` puntava a un `social-preview.png` inesistente, ora usa il `.webp` reale.
+- I font restano di sistema (nessun Google Fonts da rimuovere). Aggiunto `rel="preconnect"` verso `api.github.com`, usato da `app.js` per la versione dell'installer.
+- Titoli e meta description riscritti entro i limiti (title ≤60, description ≤155 caratteri) con parole chiave naturali (gestionale campionato biliardo/boccette a batterie, sorteggio, convocazioni, classifiche; EN: billiards/boccette heat championship tournament manager).

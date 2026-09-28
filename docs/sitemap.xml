@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://plagemes.github.io/biliardoos-releases/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plagemes.github.io/biliardoos-releases/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plagemes.github.io/biliardoos-releases/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plagemes.github.io/biliardoos-releases/"/>
+  </url>
+  <url>
+    <loc>https://plagemes.github.io/biliardoos-releases/en/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plagemes.github.io/biliardoos-releases/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plagemes.github.io/biliardoos-releases/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plagemes.github.io/biliardoos-releases/"/>
+  </url>
+  <url>
+    <loc>https://plagemes.github.io/biliardoos-releases/guida-rapida.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plagemes.github.io/biliardoos-releases/guida-rapida.html"/>
+  </url>
+</urlset>

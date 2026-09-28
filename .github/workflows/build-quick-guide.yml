@@ -1,0 +1,38 @@
+name: Build quick guide PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/guida-rapida.html'
+      - 'tools/build_quick_guide.py'
+      - '.github/workflows/build-quick-guide.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF dependencies
+        run: pip install --disable-pip-version-check reportlab
+      - name: Build bilingual PDF
+        run: python tools/build_quick_guide.py
+      - name: Commit generated PDF
+        shell: bash
+        run: |
+          if git diff --quiet -- docs/guida-rapida.pdf; then
+            echo "PDF is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/guida-rapida.pdf
+          git commit -m "docs: rebuild bilingual quick guide PDF"
+          git push

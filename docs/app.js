@@ -2,8 +2,10 @@
 (() => {
   'use strict';
   document.documentElement.classList.replace('no-js', 'js');
+  const isEnglish = document.documentElement.lang.toLowerCase().startsWith('en');
+  const t = (it, en) => isEnglish ? en : it;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const siteUrl = 'https://plagemes.github.io/biliardoos-releases/?noauto';
+  const siteUrl = isEnglish ? 'https://plagemes.github.io/biliardoos-releases/en/?noauto' : 'https://plagemes.github.io/biliardoos-releases/?noauto';
   const status = document.getElementById('download-status');
   const announce = (message) => { if (status) status.textContent = message; };
   document.getElementById('year').textContent = String(new Date().getFullYear());
@@ -13,7 +15,7 @@
   const mobileNav = document.getElementById('mobile-nav');
   const setMenu = (open) => {
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    menu.setAttribute('aria-label', open ? t('Chiudi il menu', 'Close menu') : t('Apri il menu', 'Open menu'));
     mobileNav.hidden = !open;
   };
   menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
@@ -30,8 +32,17 @@
     if (!event.matches) setMenu(false);
   });
 
-  // Real repository screenshots. The original files are intentionally unmodified.
-  const screens = [
+  // Product screenshots follow the active language. English views are dedicated assets,
+  // not overlaid translations, so the site stays visually coherent in both editions.
+  const screens = isEnglish ? [
+    { file: '02-tournament-overview-en.webp', title: 'Your championship', alt: 'BiliardoOS: English championship overview with phases, winner and closeout tools', text: 'From setup to closeout: every championship phase, the next step and the tools you need, all in one view.' },
+    { file: '03-draw-report-en.webp', title: 'The draw, documented', alt: 'BiliardoOS: English draw report with summary, applied rules and PDF export', text: 'Heats built around the rules you set. The report records the draw and its random seed, so the result can be reproduced instead of reconstructed from memory.' },
+    { file: '04-callups-4-per-a4-en.webp', title: 'Call-ups, ready to go', alt: 'BiliardoOS: English call-up slips laid out four per A4 page', text: 'Single slips for sending, or four per A4 page for printing. Call times, venues and tournament details are already in place.' },
+    { file: '07-heat-results-en.webp', title: 'Match night, point by point', alt: 'BiliardoOS: English heat results with match scores and qualifiers', text: 'Enter scores, follow qualifications and prepare the final phase. From roll call to the last match, the championship stays under control.' },
+    { file: '09-standings-en.webp', title: 'Every result has weight', alt: 'BiliardoOS: English championship standings with players, clubs and points', text: 'Individual and club standings, seasons, statistics and hall of fame. Match night ends, but every result remains easy to find.' },
+    { file: '11-whatsapp-inbox-en.webp', title: 'The club stays connected', alt: 'BiliardoOS: English WhatsApp inbox with conversations and an AI-assisted reply', text: 'WhatsApp and email in the same workflow. Follow conversations, call-ups and scheduled sends without losing the championship context.' },
+    { file: '12-ai-assistant-en.webp', title: 'Help, right where you need it', alt: 'BiliardoOS: English local AI assistant beside the championship screen', text: 'A question about the app or your championship data? The assistant stays beside your work and runs locally on your PC.' }
+  ] : [
     { file: '02-tournament-overview.png', title: 'Il tuo campionato', alt: 'BiliardoOS: panoramica del campionato con fasi, vincitore e strumenti di chiusura', text: 'Dall’impostazione alla chiusura: le fasi del campionato, il prossimo passo e gli strumenti che ti servono, in un’unica vista.' },
     { file: '03-verbale-sorteggio.png', title: 'Il sorteggio, nero su bianco', alt: 'BiliardoOS: verbale di sorteggio con riepilogo, regole applicate e documento esportabile', text: 'Batterie costruite secondo le regole che imposti. Il verbale registra il sorteggio e il seed permette di riprodurlo, senza ricostruire tutto a memoria.' },
     { file: '04-convocazioni-4-per-a4.png', title: 'Le convocazioni', alt: 'BiliardoOS: tagliandi di convocazione impaginati quattro per foglio A4', text: 'Tagliandi singoli per l’invio o quattro per foglio A4 per la stampa. Orari di chiamata, sedi e informazioni del torneo, già al loro posto.' },
@@ -40,6 +51,7 @@
     { file: '11-whatsapp-inbox.png', title: 'Il circolo, in contatto', alt: 'BiliardoOS: casella dei messaggi WhatsApp con elenco delle conversazioni e risposta al giocatore', text: 'WhatsApp ed email nello stesso flusso di lavoro. Segui conversazioni, convocazioni e invii programmati, senza perdere il contesto del campionato.' },
     { file: '12-assistente-ai.png', title: 'Un aiuto, proprio lì', alt: 'BiliardoOS: assistente AI locale aperto accanto alla pagina del campionato', text: 'Una domanda sull’app o sui dati del campionato? L’assistente è accanto alla tua schermata e lavora sul tuo PC, con un motore AI locale.' }
   ];
+  const screenDir = isEnglish ? '../screenshots-en' : 'screenshots';
   const tabs = Array.from(document.querySelectorAll('[data-screen]'));
   const panel = document.getElementById('screen-panel');
   const image = document.getElementById('product-screen');
@@ -54,10 +66,10 @@
       tab.tabIndex = i === activeScreen ? 0 : -1;
     });
     panel.setAttribute('aria-labelledby', tabs[activeScreen].id);
-    image.src = `screenshots/${screen.file}`;
+    image.src = `${screenDir}/${screen.file}`;
     image.alt = screen.alt;
     screenLink.href = image.src;
-    screenLink.setAttribute('aria-label', `Ingrandisci la schermata: ${screen.title}`);
+    screenLink.setAttribute('aria-label', `${t('Ingrandisci la schermata', 'Enlarge screen')}: ${screen.title}`);
     document.getElementById('screen-label').textContent = screen.title;
     document.getElementById('screen-description').textContent = screen.text;
     const counter = document.getElementById('screen-count');
@@ -109,7 +121,7 @@
   if (!isWindows) document.getElementById('device-note').hidden = false;
   const downloadLinks = Array.from(document.querySelectorAll('[data-download]'));
   downloadLinks.forEach((link) => link.addEventListener('click', () => {
-    announce(/\.exe(?:$|\?)/i.test(link.href) ? 'Download richiesto. Se non parte, usa il collegamento “Tutte le versioni”.' : 'Si apre la pagina della versione più recente su GitHub.');
+    announce(/\.exe(?:$|\?)/i.test(link.href) ? t('Download richiesto. Se non parte, usa il collegamento “Tutte le versioni”.', 'Download requested. If it does not start, use the “All releases” link.') : t('Si apre la pagina della versione più recente su GitHub.', 'Opening the latest release page on GitHub.'));
   }));
   function allowedDownload(url) {
     try {
@@ -131,14 +143,14 @@
       if (!installer) return;
       downloadLinks.forEach((link) => { link.href = installer.browser_download_url; });
       const version = String(release.tag_name || '').replace(/^v/i, '').slice(0, 32);
-      if (version) document.querySelectorAll('[data-version]').forEach((node) => { node.textContent = `Versione ${version}`; });
+      if (version) document.querySelectorAll('[data-version]').forEach((node) => { node.textContent = `${t('Versione', 'Version')} ${version}`; });
       const size = Number(installer.size);
       if (Number.isFinite(size) && size > 0) document.querySelectorAll('[data-size]').forEach((node) => { node.textContent = `· ${Math.round(size / 1048576)} MB`; });
       // No surprise downloads on a marketing page. ?noauto remains supported.
       // Explicit ?download=1 is available for intentional direct-download links, on Windows only.
       const params = new URLSearchParams(location.search);
       if (isWindows && params.get('download') === '1' && !params.has('noauto')) {
-        announce('Download richiesto dal collegamento. L’installer si apre ora.');
+        announce(t('Download richiesto dal collegamento. L’installer si apre ora.', 'Download requested by this link. The installer is opening now.'));
         window.location.assign(installer.browser_download_url);
       }
     } catch {
@@ -159,8 +171,8 @@
         const copied = document.execCommand('copy'); field.remove();
         if (!copied) throw new Error('Clipboard unavailable');
       }
-      announce('Link copiato. Inoltralo al tuo PC Windows.');
-    } catch { announce(`Copia questo indirizzo: ${siteUrl}`); }
+      announce(t('Link copiato. Inoltralo al tuo PC Windows.', 'Link copied. Send it to your Windows PC.'));
+    } catch { announce(`${t('Copia questo indirizzo', 'Copy this address')}: ${siteUrl}`); }
   });
 
   // Content is visible without JS; animation is only added after observation is available.

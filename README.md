@@ -40,6 +40,8 @@ podium, with convocations, roll call, results, standings, WhatsApp/email
 communications, and a local AI assistant that runs entirely on the
 organizer's own PC.
 
+![Championship overview with stages, winner and closing tools](docs/screenshots-en/02-tournament-overview-en.webp)
+
 **Note:** the app's user interface is currently in Italian, with partial
 English support. It was built for the Italian amateur billiards/boccette
 scene and its terminology (heats, roll call, convocation tickets...)
@@ -60,7 +62,7 @@ quality-scored preview before you confirm. Every draw produces a report
 ("Anteprima sorteggio" / "Verbale di Sorteggio", i.e. draw preview / draw
 record) exportable to PDF, with a reproducible seed.
 
-![Draw report (verbale di sorteggio) for a heat championship](docs/screenshots/03-verbale-sorteggio.webp)
+![Draw report for a heat championship](docs/screenshots-en/03-draw-report-en.webp)
 
 ### 🎫 Convocations and tickets
 
@@ -68,7 +70,7 @@ PDF convocation tickets (*tagliandi di convocazione*), laid out either 4
 per A4 sheet for printing at the venue or as single tickets for
 emailing/WhatsApp, with call times calculated automatically.
 
-![Convocation tickets, four per A4 sheet](docs/screenshots/04-convocazioni-4-per-a4.webp)
+![Convocation tickets, four per A4 sheet](docs/screenshots-en/04-callups-4-per-a4-en.webp)
 
 ### ✅ Roll call and results
 
@@ -77,10 +79,7 @@ penalties, exclusion, and walkover where needed) and real-time result
 entry, with standings and qualification updated after every match - even
 from a phone, via the read-only LAN server ("Results on your phone").
 
-<p float="left">
-  <img src="docs/screenshots/06-appello.webp" alt="Roll call (appello) screen with check-in status" width="390" />
-  <img src="docs/screenshots/07-risultati-batterie.webp" alt="Heat results with match scores and qualifiers" width="390" />
-</p>
+![Heat results with match scores and qualifiers](docs/screenshots-en/07-heat-results-en.webp)
 
 ### 🏆 Final phase and standings
 
@@ -88,7 +87,7 @@ Automatic generation of the final-phase bracket from the heat results, all
 the way to the podium, plus season standings (individual and by
 club/venue), a hall of fame, and advanced statistics.
 
-![Final phase bracket and podium](docs/screenshots/08-fase-finale-podio.webp)
+![Season standings](docs/screenshots-en/09-standings-en.webp)
 
 ### 💬 WhatsApp/email communications with anti-ban protection
 
@@ -99,7 +98,7 @@ hourly/daily limits, periodic pauses, quiet hours, an automatic circuit
 breaker if anomalies are detected) and a transparency page showing exactly
 what the queue is doing right now and why.
 
-![Communications queue transparency page](docs/screenshots/10-programmazione-invii.webp)
+![WhatsApp inbox inside the app](docs/screenshots-en/11-whatsapp-inbox-en.webp)
 
 ### 🤖 Local AI assistant, also on WhatsApp
 
@@ -109,7 +108,7 @@ PC's hardware: it answers questions about using the app, with direct links
 to the relevant pages. The same assistant can also answer players on
 WhatsApp, with organizer approval required for sensitive requests.
 
-![Local AI assistant answering a question in the app](docs/screenshots/12-assistente-ai.webp)
+![Local AI assistant answering a question in the app](docs/screenshots-en/12-ai-assistant-en.webp)
 
 ### 🔗 Home/laptop link and on-site phone entry
 
